@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HB INDUSTRY [BATNA] | Mobilier Scientifique &amp; Infrastructure de Laboratoire</title>
+<!-- Google Fonts: Syne, JetBrains Mono, Work Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Syne:wght@500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#4cd7f6",
+            "on-secondary": "#472a00",
+            "surface": "#101419",
+            "on-primary-container": "#00424f",
+            "on-primary-fixed": "#001f26",
+            "on-tertiary-container": "#343c4a",
+            "surface-container": "#1c2025",
+            "outline": "#869397",
+            "primary": "#4cd7f6",
+            "tertiary-container": "#9fa7b8",
+            "on-primary-fixed-variant": "#004e5c",
+            "on-error": "#690005",
+            "primary-fixed": "#acedff",
+            "tertiary-fixed-dim": "#bfc7d8",
+            "surface-bright": "#36393f",
+            "inverse-on-surface": "#2d3136",
+            "inverse-surface": "#e0e2ea",
+            "on-error-container": "#ffdad6",
+            "surface-container-low": "#181c21",
+            "surface-container-highest": "#31353b",
+            "secondary-container": "#ee9800",
+            "surface-variant": "#31353b",
+            "surface-container-lowest": "#0a0e13",
+            "on-background": "#e0e2ea",
+            "secondary-fixed": "#ffddb8",
+            "surface-container-high": "#262a30",
+            "tertiary": "#bfc7d8",
+            "tertiary-fixed": "#dbe3f4",
+            "error-container": "#93000a",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-primary": "#003640",
+            "on-secondary-fixed": "#2a1700",
+            "outline-variant": "#3d494c",
+            "on-surface-variant": "#bcc9cd",
+            "on-surface": "#e0e2ea",
+            "inverse-primary": "#00687a",
+            "on-tertiary-fixed": "#141c28",
+            "secondary": "#ffb95f",
+            "on-tertiary-fixed-variant": "#3f4755",
+            "on-secondary-fixed-variant": "#653e00",
+            "primary-container": "#06b6d4",
+            "background": "#101419",
+            "on-tertiary": "#29313e",
+            "error": "#ffb4ab",
+            "surface-dim": "#101419",
+            "primary-fixed-dim": "#4cd7f6",
+            "on-secondary-container": "#5b3800"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["JetBrains Mono"],
+            "label-md": ["JetBrains Mono"],
+            "body-md": ["Work Sans"],
+            "display-lg-mobile": ["Syne"],
+            "headline-lg": ["Syne"],
+            "headline-sm": ["Syne"],
+            "headline-xl-mobile": ["Syne"],
+            "body-lg": ["Work Sans"],
+            "label-lg": ["JetBrains Mono"],
+            "headline-xl": ["Syne"],
+            "display-lg": ["Syne"],
+            "headline-md": ["Syne"],
+            "body-sm": ["Work Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+    }
+    .cad-grid-bg {
+      background-image: 
+        linear-gradient(to right, rgba(61, 73, 76, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(61, 73, 76, 0.15) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .cad-crosshair-card {
+      position: relative;
+    }
+    .cad-crosshair-card::before {
+      content: '+';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      color: #4cd7f6;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1;
+      opacity: 0.6;
+    }
+    .cad-crosshair-card::after {
+      content: '+';
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      color: #4cd7f6;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-surface-container-lowest cad-grid-bg min-h-screen">
+<!-- TOP LIVE TELEMETRY TICKER -->
+<aside aria-label="Facility Live Status" class="w-full bg-surface-container-lowest border-b border-outline-variant/40 py-1.5 px-4 font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between tracking-widest overflow-x-auto whitespace-nowrap">
+<div class="flex items-center gap-6">
+<span class="inline-flex items-center gap-2 text-primary font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        BATNA ADVANCED FABRICATION FACILITY : STATUS ACTIVE [LAT 35.56°N, LON 5.61°E]
+      </span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant/80">NORME EUROPÉENNE EN 13150 / ISO 9001:2015</span>
+<span class="text-outline-variant">|</span>
+<span class="text-secondary font-medium">TEMPS MACHINE CNC : 99.4% UP</span>
+</div>
+<div class="hidden lg:flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<span>UNITÉ : N'GAOUS INDUSTRIAL ZONE</span>
+<span class="text-primary/70">REF CAD-DZ-2025</span>
+</div>
+</aside>
+<!-- SHARED COMPONENT 1: TopNavBar -->
+<header class="sticky top-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/40">
+<div class="w-full px-space-lg mx-auto flex items-center justify-between h-16 max-w-full">
+<!-- Brand Logo / Product Name Anchor -->
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3" href="#hero">
+<img alt="EURL HB Industry Fabrik Lead Badge" class="h-8 md:h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XM5A2T6C34WqLsrzuW14Rac4KFVrY13D28M2SFnkc5V0AIZvtPZgjlVi1HX2PWzpiy9lc8iDZyB0VHgYnR1JeW7fBOcR1qKAheNOe7Rqo40NcGXzqxo2nN_ec1RtrqUoqzZu4_9nI8mU0nqNcf1KuySF_ggh1RBaEiXIHOD2WT6094bD67WFClI3k5tXjfj68qR9uGki3GvzfP9Wwtlh-FXncBLku_YiAZAsGmizxdWn46Xm72vnEc1-8"/>
+<span class="hidden xl:inline-block font-headline-sm text-headline-sm font-bold text-on-surface tracking-wider border-l border-outline-variant/60 pl-3">
+            HB INDUSTRY [BATNA]
+          </span>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:text-primary transition-colors pb-1" href="#ingenierie">
+          Ingénierie
+        </a>
+<a class="text-primary border-b-2 border-primary font-label-sm text-label-sm uppercase tracking-widest pb-1" href="#catalogue">
+          Catalogue Équipements
+        </a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:text-primary transition-colors pb-1" href="#usine-batna">
+          Usine Batna
+        </a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:text-primary transition-colors pb-1" href="#deploiements">
+          Déploiements
+        </a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:text-primary transition-colors pb-1" href="#terminal-devis">
+          Devis &amp; AO
+        </a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<!-- Language Switcher -->
+<div class="flex items-center border border-outline-variant/60 bg-surface-container-low px-2 py-1 text-label-sm font-label-sm">
+<button class="text-primary font-bold px-1" type="button">FR</button>
+<span class="text-outline-variant/40 px-0.5">/</span>
+<button class="text-on-surface-variant/70 hover:text-primary px-1 transition-colors" type="button">AR</button>
+<span class="text-outline-variant/40 px-0.5">/</span>
+<button class="text-on-surface-variant/70 hover:text-primary px-1 transition-colors" type="button">EN</button>
+</div>
+<!-- Terminal & Tune telemetry icon actions -->
+<button aria-label="Terminal CAD console" class="hidden sm:inline-flex p-2 border border-outline-variant/50 text-on-surface-variant hover:border-primary/60 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button aria-label="System calibration tune" class="hidden sm:inline-flex p-2 border border-outline-variant/50 text-on-surface-variant hover:border-primary/60 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<!-- Primary Action CTA -->
+<a class="inline-flex items-center gap-2 bg-primary-container text-surface-container-lowest font-label-sm text-label-sm uppercase px-4 py-2 font-bold tracking-wider hover:bg-primary transition-colors active:scale-[0.99]" href="#terminal-devis">
+<span>Devis Immédiat</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main>
+<!-- 2. HERO SECTION -->
+<section class="relative pt-8 pb-16 md:py-20 px-space-lg border-b border-outline-variant/40 overflow-hidden" id="hero">
+<div class="max-w-7xl mx-auto">
+<!-- Header Tag & Telemetry HUD -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="inline-flex items-center gap-2 border border-outline-variant/80 bg-surface-container-low/90 px-3 py-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">file_download_done</span>
+<span>EURL HB INDUSTRY GROUP • MOBILIER TECHNIQUE ET SCIENTIFIQUE DE HAUTE PRÉCISION</span>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<span>SPEC: LAB-GRADE-HEAVY</span>
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+<span>MATRICE : 05-DZ-BATNA</span>
+</div>
+</div>
+<!-- Monolithic Headline -->
+<div class="mb-8">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl tracking-tight leading-none uppercase">
+<span class="text-white block font-extrabold mb-1">L'INFRASTRUCTURE SCIENTIFIQUE.</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-slate-200 to-white block font-extrabold">
+              FORGÉE POUR L'EXTRÊME.
+            </span>
+</h1>
+<p class="mt-5 max-w-3xl font-body-lg text-body-lg text-on-surface-variant font-light">
+            Conçues et façonnées en Algérie selon les standards européens <span class="text-on-surface font-medium">EN 13150 &amp; EN 14470-1</span>. Des paillasses techniques modulaires, sorbonnes d'extraction blindées et armoires de sécurité à l'épreuve des environnements chimiques les plus hostiles.
+          </p>
+</div>
+<!-- Technical Telemetry HUD Metrics (4-Pill Bento) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+<div class="bg-surface-container-low border border-outline-variant/60 p-4 cad-crosshair-card">
+<span class="font-label-lg text-label-lg text-primary block font-bold">[850 KG/M²]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">CHARGE STATIQUE ADMISSIBLE (CHÂSSIS TUBE ACIER 60x40x2mm)</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/60 p-4 cad-crosshair-card">
+<span class="font-label-lg text-label-lg text-primary block font-bold">[± 0.2 MM]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">TOLÉRANCE D'USINAGE &amp; PLANÉITÉ MONOLITHIQUE</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/60 p-4 cad-crosshair-card">
+<span class="font-label-lg text-label-lg text-secondary block font-bold">[99.8%]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">IMMUNITÉ CHIMIQUE RÉSINE PHÉNOLIQUE &amp; ÉPOXY FOUR 220°C</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/60 p-4 cad-crosshair-card">
+<span class="font-label-lg text-label-lg text-primary block font-bold">[100% LOCAL]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">INGÉNIERIE &amp; TRANSFORMATION MÉTALLIQUE À N'GAOUS, BATNA</span>
+</div>
+</div>
+<!-- Hero Visual CAD Viewport with Callouts -->
+<div class="relative border border-outline-variant bg-surface-container-lowest overflow-hidden group">
+<!-- Viewport Corner Rulers / HUD Header -->
+<div class="bg-surface-container-low/95 border-b border-outline-variant/60 px-4 py-2 flex flex-wrap items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>CAD VIEWPORT // BANC D'ESSAI PAILLASSE CENTRALE TITAN-LAB 2400</span>
+</div>
+<div class="flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<span>AXIS: X/Y/Z CALIBRATED</span>
+<span class="text-secondary">● LIVE OVERLAY ACTIVE</span>
+</div>
+</div>
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.01]" data-alt="A pristine cleanroom research laboratory equipped with heavy matte charcoal industrial steel laboratory benches engineered by HB Industry Group. Overhead structural gantry frames carry calibrated LED task lighting and integrated fluid lines. Large glass curtain walls reveal advanced CNC machinery and clean testing environments. The scene is illuminated by surgical, high-key white lights reflecting softly across phenolic resin work surfaces in a clinical high-precision aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlp19VcX0ohyLYUR9-4oVxng3dyt6_fF0ylPM3kA2k_aPU1EUl9oNM6HENBwpG12sJQD8-kXdJc0X-dQSUA9B_KT693zu3ng-4bEDs3MESPLZqG84Oc0kUDRDnzpeyB2XXDE-Bq2t-y8HniHRZ7sWAIO31seH--kPyVA08fG9vPqQ46aJxcbLm55QmWHAGC6GrV7dK5q2Be60znxB3sLRGJuQ0gOM949-tWlgXhKbjB3QcBuS2nL1y3QSyeHilvB0_Y6ebCZ7vIE"/>
+<!-- CAD Architectural Callouts Overlay -->
+<div class="absolute top-4 left-4 md:top-8 md:left-8 bg-surface-container-lowest/90 backdrop-blur border border-primary/50 p-2.5 max-w-xs shadow-lg">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">adjust</span>
+<span>[CALLOUT A]</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface mt-1">
+                GAINE TECHNIQUE FLUIDES &amp; GAZ PURS IP55 INTÉGRÉE
+              </p>
+</div>
+<div class="absolute bottom-16 right-4 md:bottom-12 md:right-8 bg-surface-container-lowest/90 backdrop-blur border border-primary/50 p-2.5 max-w-xs shadow-lg">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">adjust</span>
+<span>[CALLOUT B]</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface mt-1">
+                REVÊTEMENT PHÉNOLIQUE 20mm RÉSISTANT ACIDES/BASES
+              </p>
+</div>
+<div class="hidden md:block absolute bottom-6 left-1/3 bg-surface-container-lowest/90 backdrop-blur border border-outline-variant p-2.5 max-w-xs">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>[CALLOUT C]</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface mt-1">
+                PIÉTEMENT EN 'C' ÉQUILIBRÉ AVEC VÉRINS DE CALAGE MÉCANIQUES
+              </p>
+</div>
+</div>
+<!-- Bottom Viewport Action Bar -->
+<div class="bg-surface-container-low border-t border-outline-variant/60 p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-primary-container text-surface-container-lowest px-5 py-2.5 font-label-sm text-label-sm uppercase font-bold tracking-wider hover:bg-primary transition-colors" href="#catalogue">
+<span class="material-symbols-outlined text-[16px]">download</span>
+                Télécharger le Cahier des Charges &amp; CAD (.DWG/.STEP)
+              </a>
+<a class="inline-flex items-center gap-2 border border-outline-variant bg-surface hover:border-primary/60 px-5 py-2.5 font-label-sm text-label-sm uppercase font-semibold text-on-surface transition-colors" href="#usine-batna">
+<span class="material-symbols-outlined text-[16px]">factory</span>
+                Visiter l'Atelier de Fabrication (Batna)
+              </a>
+</div>
+<div class="font-label-sm text-label-sm text-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>CERTIFIÉ CONFORME EN 13150:2020</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. CAD STRUCTURAL BLUEPRINT & MATERIAL INSPECTOR -->
+<section class="py-16 md:py-20 px-space-lg border-b border-outline-variant/40 bg-surface-container-lowest/60" id="ingenierie">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-outline-variant/30 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary block font-bold mb-1">
+              02 / ARCHITECTURE MÉCANIQUE • ÉCLATÉ TECHNIQUE
+            </span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+              Tolérance Chirurgicale &amp; Alliages Industriels
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+            Chaque élément est découpé au laser fibre optique, plié par commande numérique CNC et thermolaqué à 220°C pour une longévité dépassant 25 ans en milieu agressif.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- LAYER 01 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 cad-crosshair-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">LAYER 01</span>
+<span>CHASSIS_CORE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-3">
+                Châssis Autoportant Tubulaire 60x40mm
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                Acier laminé à froid décapé, soudures TIG/MIG robotisées, résistance sismique et zéro vibration pour microscopie et spectrométrie de masse.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>ÉPAISSEUR : 2.0 mm</span>
+<span class="text-primary">CHARGEMENT: 850kg/m²</span>
+</div>
+</div>
+<!-- LAYER 02 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 cad-crosshair-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">LAYER 02</span>
+<span>FINISH_COAT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-3">
+                Thermolaquage Électrostatique Époxy 220°C
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                Polymérisation thermique 80 microns. Résistance au brouillard salin &gt; 1000h, insensibilité absolue aux décontaminants hospitaliers et désinfectants UV-C.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>COATING : 80µ ÉPOXY</span>
+<span class="text-primary">SALIN : &gt;1000H</span>
+</div>
+</div>
+<!-- LAYER 03 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 cad-crosshair-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">LAYER 03</span>
+<span>SURFACE_RESIN</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-3">
+                Plan de Travail Résine Phénolique 20mm
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                Non poreux, imputrescible, usiné avec chanfreins anti-goutte, tolérance hydrocarbures, acides fluorhydrique / sulfurique et solvants chlorés.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>MASSE : 20mm PLEIN</span>
+<span class="text-secondary">ACID TEST: PASSED</span>
+</div>
+</div>
+<!-- LAYER 04 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 cad-crosshair-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">LAYER 04</span>
+<span>INTEGRATED_FLUIDS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-3">
+                Gaines Techniques Intégrées &amp; Fluides IP55
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                Canalisations séparées fluides inertes, gaz combustibles, eau déminéralisée, prises électriques 230V/380V blindées et connectique data RJ45 Cat6A.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>INDICE : IP55 ÉTANCHE</span>
+<span class="text-primary">CAT6A / 380V TRI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. HARDWARE MACHINERY & SCIENTIFIC EQUIPMENT CATALOG -->
+<section class="py-16 md:py-20 px-space-lg border-b border-outline-variant/40" id="catalogue">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary block font-bold mb-1">
+              03 / CATALOGUE INDUSTRIEL STANDARD &amp; BESPOKE
+            </span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+              Spécifications de la Gamme Usine Batna
+            </h2>
+</div>
+<div class="font-label-sm text-label-sm text-outline-variant flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            DISPONIBILITÉ STOCK &amp; DÉLAI USINE: 15 JOURS OUVRÉS
+          </div>
+</div>
+<!-- Category Filters -->
+<div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 text-label-sm font-label-sm">
+<button class="bg-primary text-surface-container-lowest font-bold px-3 py-1.5 whitespace-nowrap" type="button">Tout le Catalogue</button>
+<button class="bg-surface-container-low border border-outline-variant/60 text-on-surface-variant hover:text-primary px-3 py-1.5 whitespace-nowrap transition-colors" type="button">Paillasses Centrales</button>
+<button class="bg-surface-container-low border border-outline-variant/60 text-on-surface-variant hover:text-primary px-3 py-1.5 whitespace-nowrap transition-colors" type="button">Paillasses Humides &amp; Sèches</button>
+<button class="bg-surface-container-low border border-outline-variant/60 text-on-surface-variant hover:text-primary px-3 py-1.5 whitespace-nowrap transition-colors" type="button">Armoires Anti-Feu 90 Min</button>
+<button class="bg-surface-container-low border border-outline-variant/60 text-on-surface-variant hover:text-primary px-3 py-1.5 whitespace-nowrap transition-colors" type="button">Sorbonnes d'Extraction</button>
+<button class="bg-surface-container-low border border-outline-variant/60 text-on-surface-variant hover:text-primary px-3 py-1.5 whitespace-nowrap transition-colors" type="button">Tables TP Éducation</button>
+</div>
+<!-- Bento Grid for 4 Machinery Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<article class="bg-surface-container-low border border-outline-variant/60 p-6 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-2.5 py-0.5 border border-primary/50 text-primary font-label-sm text-label-sm">
+                  EN 13150 / CHARGE 1200KG
+                </span>
+<span class="text-outline font-label-sm text-label-sm">MODEL #HB-TL2400</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+                PAILLASSE CENTRALE DOUBLE ILOT [SÉRIE TITAN-LAB 2400]
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Architecture bipolaire avec pont technique suspendu pour alimentation en continu. Intègre 8 blocs prises étanches et double rampe LED 1200 Lux calibrée pour photométrie.
+              </p>
+<!-- Technical Specs Table -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-3 mb-5 font-label-sm text-label-sm space-y-1.5">
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">DIMENSIONS STANDARD</span>
+<span class="text-on-surface font-semibold">L: 2400mm × P: 1500mm × H: 900mm</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">PLAN DE TRAVAIL</span>
+<span class="text-primary font-semibold">Top Résine Phénolique 20mm Monobloc</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">FLUIDES INTÉGRÉS</span>
+<span class="text-on-surface font-semibold">Robinetterie laiton nickelé + Évier polypropylène</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-secondary">CHÂSSIS DÉCOUPÉ AU FIBER-LASER 6KW</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#terminal-devis">
+<span>CONFIGURER CE MODÈLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-low border border-outline-variant/60 p-6 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-2.5 py-0.5 border border-secondary/60 text-secondary font-label-sm text-label-sm">
+                  EN 14470-1 COUPE-FEU 90 MIN
+                </span>
+<span class="text-outline font-label-sm text-label-sm">MODEL #HB-PG90</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+                ARMOIRE DE SÉCURITÉ INFLAMMABLES [SÉRIE PYRO-GUARD 90]
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Confinement thermique extrême à double paroi isolante minérale. Fermeture automatique des portes en cas d'élévation thermique à 50°C par thermo-fusible certifié.
+              </p>
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-3 mb-5 font-label-sm text-label-sm space-y-1.5">
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">DIMENSIONS EXTÉRIEURES</span>
+<span class="text-on-surface font-semibold">L: 1200mm × P: 600mm × H: 1950mm</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">BAC DE RÉTENTION</span>
+<span class="text-secondary font-semibold">Volume 45L Inox 316L avec caillebotis</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">VENTILATION</span>
+<span class="text-on-surface font-semibold">Buse Ø100mm avec clapets coupe-feu 70°C</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-secondary">RÉSISTANCE FEU VÉRIFIÉE CSTB</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#terminal-devis">
+<span>CONFIGURER CE MODÈLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-low border border-outline-variant/60 p-6 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-2.5 py-0.5 border border-primary/50 text-primary font-label-sm text-label-sm">
+                  VITESSE FRONTALE 0.5 M/S
+                </span>
+<span class="text-outline font-label-sm text-label-sm">MODEL #HB-VC1500</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+                SORBONNE D'EXTRACTION AÉRODYNAMIQUE [SÉRIE VORTEX-CHEM 1500]
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Système de captage haute vitesse à flux laminaire constant. Façade guillotine en verre de sécurité 6mm contrebalancée avec arrêt de sécurité anti-chute.
+              </p>
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-3 mb-5 font-label-sm text-label-sm space-y-1.5">
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">DIMENSIONS HORS TOUT</span>
+<span class="text-on-surface font-semibold">L: 1500mm × P: 850mm × H: 2400mm</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">RÉGULATION AIR</span>
+<span class="text-primary font-semibold">Contrôleur numérique tactile avec alarme débit</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">REVÊTEMENT INTÉRIEUR</span>
+<span class="text-on-surface font-semibold">Grès étiré ou polypropylène massif soudé</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-primary">HOMOLOGUÉ EN 14175-2/3</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#terminal-devis">
+<span>CONFIGURER CE MODÈLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-low border border-outline-variant/60 p-6 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-2.5 py-0.5 border border-outline text-on-surface-variant font-label-sm text-label-sm">
+                  NORME NF ÉDUCATION &amp; RECHERCHE
+                </span>
+<span class="text-outline font-label-sm text-label-sm">MODEL #HB-AP1800</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+                TABLE MODULAIRE DE TRAVAUX PRATIQUES [SÉRIE ACADÉMIE-PRO]
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Équipement robuste pensé pour les cycles universitaires intensifs. Sécurité électrique par élève avec protection différentielle 30mA et arrêt d'urgence coup-de-poing.
+              </p>
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-3 mb-5 font-label-sm text-label-sm space-y-1.5">
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">DIMENSIONS STANDARD</span>
+<span class="text-on-surface font-semibold">L: 1800mm × P: 750mm × H: 850mm</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/20 pb-1">
+<span class="text-outline">SÉCURITÉ ÉLECTRIQUE</span>
+<span class="text-primary font-semibold">Disjoncteur modulaire 16A 30mA dédié par poste</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">STRUCTURE</span>
+<span class="text-on-surface font-semibold">Tube acier soudé 50×30 thermolaqué gris RAL 7016</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/40">
+<span class="font-label-sm text-label-sm text-outline">DÉPLOIEMENT CAMPUS EXPRESS</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="#terminal-devis">
+<span>CONFIGURER CE MODÈLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- 5. THE BATNA MANUFACTURING FACILITY & MANIFESTO -->
+<section class="py-16 md:py-24 px-space-lg border-b border-outline-variant/40 bg-surface-container-lowest relative overflow-hidden" id="usine-batna">
+<!-- Background Coordinate Watermark -->
+<div class="absolute right-4 bottom-4 font-label-sm text-label-sm text-outline-variant/20 pointer-events-none select-none hidden md:block">
+        COORD: 35°33'45"N 5°36'40"E // ELEV: 1048M // ZONE IND. N'GAOUS
+      </div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 font-label-sm text-label-sm text-secondary border border-secondary/40 px-3 py-1">
+<span class="material-symbols-outlined text-[14px]">precision_manufacturing</span>
+<span>SOUVERAINETÉ INDUSTRIELLE &amp; USINAGE LOCAL</span>
+</div>
+<blockquote class="font-headline-lg text-headline-lg font-bold text-on-surface leading-tight">
+              « NOUS N'IMPORTONS PAS DE CATALOGUES. NOUS FORGEONS L'ACIER DANS LES AURÈS. »
+            </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Basée à N'Gaous dans la wilaya de Batna, <span class="text-on-surface font-medium">EURL HB Industry Group</span> exploite un complexe de fabrication intégré de pointe. De la feuille d'acier brute jusqu'à la mise sous tension de paillasses informatisées, chaque étape est maîtrisée par nos ingénieurs et techniciens algériens.
+            </p>
+<div class="space-y-4 pt-2">
+<div class="border-l-2 border-primary pl-4">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Parc Machine de Précision</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Découpe laser fibre optique 6kW ultra-rapide, presses plieuses CNC 7 axes à compensation automatique, et chaîne de poudrage électrostatique continue.
+                </p>
+</div>
+<div class="border-l-2 border-outline pl-4">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Capacité de Production Annuelle</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Plus de 3 500 mètres linéaires de mobilier technique et 800 armoires de rétention et sécurité chimique livrées annuellement sur tout le territoire national.
+                </p>
+</div>
+<div class="border-l-2 border-secondary pl-4">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Bureau d'Études CAD &amp; R&amp;D Intégré</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Modélisation 3D native SolidWorks et AutoCAD, dimensionnement aéraulique pour hottes et sorbonnes, et équipes mobiles d'installation certifiées.
+                </p>
+</div>
+</div>
+</div>
+<!-- Fact Sheet Grid Metric Box -->
+<div class="lg:col-span-5 bg-surface-container-low border border-outline-variant p-6 space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/50 pb-3">
+<span class="font-label-sm text-label-sm text-primary font-bold">RELEVÉ D'USINE [BATNA-05]</span>
+<span class="font-label-sm text-label-sm text-outline">REV 2025.1</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 bg-surface-container-lowest border border-outline-variant/40">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface block">4500 m²</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">Surface industrielle couverte</span>
+</div>
+<div class="p-3 bg-surface-container-lowest border border-outline-variant/40">
+<span class="font-headline-lg text-headline-lg font-bold text-primary block">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">Valeur ajoutée nationale</span>
+</div>
+<div class="p-3 bg-surface-container-lowest border border-outline-variant/40">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary block">15 Jours</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">Délai moyen de livraison</span>
+</div>
+<div class="p-3 bg-surface-container-lowest border border-outline-variant/40">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface block">10 Ans</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 block">Garantie structure acier</span>
+</div>
+</div>
+<div class="p-4 border border-outline-variant/60 bg-surface-container-lowest font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface mb-2">
+<span>AUDIT QUALITÉ INDUSTRIE :</span>
+<span class="text-primary font-bold">CONFORME</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5">
+<div class="bg-primary h-1.5 w-[98%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline mt-1.5 font-label-sm">
+<span>ISO 9001:2015</span>
+<span>EN 13150 TYPE A</span>
+<span>EN 14470-1 CLASSE 90</span>
+</div>
+</div>
+<a class="w-full py-3 bg-surface-container-highest text-on-surface hover:text-primary border border-outline-variant hover:border-primary text-center font-label-sm text-label-sm uppercase font-bold tracking-wider block transition-colors" href="#terminal-devis">
+              Prendre Rendez-vous à l'Usine (Batna)
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. DEPLOYMENTS & STRATEGIC INFRASTRUCTURE IN ALGERIA -->
+<section class="py-16 md:py-20 px-space-lg border-b border-outline-variant/40" id="deploiements">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary block font-bold mb-1">
+              04 / DÉPLOIEMENTS STRATÉGIQUES NATIONAUX
+            </span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+              Au Cœur des Infrastructures Critiques
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Des installations pétrochimiques du Sahara aux blocs hospitaliers universitaires de la côte.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Deployment 1 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-secondary font-bold">SITE : HASSI MESSAOUD</span>
+<span>WILAYA 30</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+                COMPLEXE ÉNERGÉTIQUE SONATRACH
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                42 laboratoires d'analyses physico-chimiques lourdes, contrôle brut hydrocarbures et paillasses résistantes aux solvants pétroliers aromatiques.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex justify-between">
+<span>VOLUME : 42 LABS</span>
+<span class="text-primary">100% OPÉRATIONNEL</span>
+</div>
+</div>
+<!-- Deployment 2 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">SITE : ALGER CENTRE</span>
+<span>WILAYA 16</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+                CHU MUSTAPHA PACHA
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Modernisation des unités d'hématologie, anatomopathologie et biologie médicale avec postes anti-vibrations pour microscopie à fluorescence.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex justify-between">
+<span>VOLUME : 14 SERVICES</span>
+<span class="text-primary">NORME CLINIQUE</span>
+</div>
+</div>
+<!-- Deployment 3 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-primary font-bold">SITE : BAB EZZOUAR</span>
+<span>WILAYA 16</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+                FACULTÉ DE CHIMIE USTHB
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                18 salles de travaux pratiques de chimie organique et minérale, équipées de sorbonnes aérodynamiques à vitesse frontale régulée.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex justify-between">
+<span>CAPACITÉ : 720 POSTES</span>
+<span class="text-primary">SÉCURITÉ TP ÉLEVÉE</span>
+</div>
+</div>
+<!-- Deployment 4 -->
+<div class="bg-surface-container-low border border-outline-variant/60 p-5 flex flex-col justify-between cad-crosshair-card">
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-3">
+<span class="text-secondary font-bold">SITE : CONSTANTINE</span>
+<span>WILAYA 25</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
+                GROUPE PHARMACEUTIQUE SAIDAL
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Aménagement de salles blanches classe ISO 7 et zones de confinement microbiologique avec mobilier inox 316L décontaminable en continu.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/40 font-label-sm text-label-sm text-outline flex justify-between">
+<span>SALLES : ISO 7 / GMP</span>
+<span class="text-primary">CONFORME BPF</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. TECHNICAL QUOTE TERMINAL & INSTANT ENGINEERING DISPATCH -->
+<section class="py-16 md:py-24 px-space-lg border-b border-outline-variant/40 bg-surface-container-lowest" id="terminal-devis">
+<div class="max-w-5xl mx-auto">
+<!-- Terminal Header HUD -->
+<div class="border border-outline-variant bg-surface-container-low p-4 sm:p-6 mb-0 border-b-0 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-wider">
+              TERMINAL CAD // CHIFFRAGE &amp; ÉTUDE D'APPEL D'OFFRES
+            </h2>
+</div>
+<div class="font-label-sm text-label-sm text-outline flex items-center gap-3">
+<span>DIRECT LINK: BUREAU D'ÉTUDES BATNA</span>
+<span class="text-primary">LATENCY: 14MS</span>
+</div>
+</div>
+<!-- Terminal Form Body -->
+<form class="border border-outline-variant bg-surface p-6 sm:p-8 space-y-6" onsubmit="event.preventDefault(); alert('Transmission vers le Bureau d\'Études de Batna effectuée. Un ingénieur prendra contact sous 2 heures ouvrées.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Field 1 -->
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="project-type">
+                  Type d'Infrastructure
+                </label>
+<span class="font-label-sm text-label-sm text-outline-variant">[INP.01]</span>
+</div>
+<select class="w-full bg-surface-container-low border border-outline-variant text-on-surface font-label-md text-label-md p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" id="project-type">
+<option value="petro">Laboratoire Pétrolier &amp; Raffinerie (Sonatrach / Parapétrolier)</option>
+<option value="sante">Centre Hospitalier / Clinique / Anatomopathologie</option>
+<option value="univ">Enseignement Supérieur, Recherche &amp; Université</option>
+<option value="pharma">Industrie Pharmaceutique &amp; Salles Blanches GMP</option>
+<option value="agro">Contrôle Qualité Agroalimentaire &amp; Eau</option>
+</select>
+</div>
+<!-- Field 2 -->
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="surface-area">
+                  Surface Estimée (m²) &amp; Nombre de Postes
+                </label>
+<span class="font-label-sm text-label-sm text-outline-variant">[INP.02]</span>
+</div>
+<input class="w-full bg-surface-container-low border border-outline-variant text-on-surface font-label-md text-label-md p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none placeholder:text-outline-variant" id="surface-area" placeholder="Ex: 350 m² — 24 Postes Centraux + 4 Sorbonnes" type="text"/>
+</div>
+<!-- Field 3 -->
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="org-name">
+                  Organisme / Entreprise / Wilaya
+                </label>
+<span class="font-label-sm text-label-sm text-outline-variant">[INP.03]</span>
+</div>
+<input class="w-full bg-surface-container-low border border-outline-variant text-on-surface font-label-md text-label-md p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none placeholder:text-outline-variant" id="org-name" placeholder="Ex: EURL / SARL / Établissement Public — Batna / Alger / Hassi Messaoud" type="text"/>
+</div>
+<!-- Field 4 -->
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="contact-phone">
+                  Téléphone &amp; Email Ingénieur
+                </label>
+<span class="font-label-sm text-label-sm text-outline-variant">[INP.04]</span>
+</div>
+<input class="w-full bg-surface-container-low border border-outline-variant text-on-surface font-label-md text-label-md p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none placeholder:text-outline-variant" id="contact-phone" placeholder="+213 (0) 5XX XX XX XX — ingenieur@societe.dz" type="text"/>
+</div>
+</div>
+<!-- Specific Requirements Checkboxes -->
+<div>
+<span class="font-label-sm text-label-sm text-on-surface block uppercase tracking-wider mb-2">
+              Spécifications Matériaux &amp; Confinement Souhaités :
+            </span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<label class="flex items-center gap-2 bg-surface-container-low p-2.5 border border-outline-variant/60 cursor-pointer hover:border-primary/50">
+<input checked="" class="w-4 h-4 bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 rounded-none" type="checkbox"/>
+<span>Top Résine Phénolique 20mm</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-low p-2.5 border border-outline-variant/60 cursor-pointer hover:border-primary/50">
+<input checked="" class="w-4 h-4 bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 rounded-none" type="checkbox"/>
+<span>Sorbonnes d'Extraction</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-low p-2.5 border border-outline-variant/60 cursor-pointer hover:border-primary/50">
+<input class="w-4 h-4 bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 rounded-none" type="checkbox"/>
+<span>Armoire Anti-Feu 90 Min</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-low p-2.5 border border-outline-variant/60 cursor-pointer hover:border-primary/50">
+<input class="w-4 h-4 bg-surface-container-lowest border-outline-variant text-primary focus:ring-0 rounded-none" type="checkbox"/>
+<span>Gaz Spéciaux &amp; Fluides Inertes</span>
+</label>
+</div>
+</div>
+<!-- Terminal Direct Actions -->
+<div class="pt-4 border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-container text-surface-container-lowest px-6 py-3 font-label-sm text-label-sm uppercase font-bold tracking-wider hover:bg-primary transition-colors" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Transmettre le Cahier des Charges (PDF/DWG)</span>
+</button>
+<!-- Instant WhatsApp Ping -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container-high border border-outline-variant hover:border-primary text-on-surface px-5 py-3 font-label-sm text-label-sm uppercase tracking-wider transition-colors" href="https://wa.me/213550000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+<span>Devis Express via WhatsApp Ingénierie</span>
+</a>
+</div>
+<div class="text-center sm:text-left font-label-sm text-label-sm text-outline-variant pt-1">
+<span>LIGNE DIRECTE BUREAU D'ÉTUDES : +213 (0) 33 80 00 00 / EMAIL: contact@hbindustry.dz</span>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- SHARED COMPONENT 2: Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 text-on-surface">
+<div class="w-full px-space-lg py-space-xl mx-auto flex flex-col justify-between gap-space-lg">
+<!-- Top Row: Brand & Telemetry -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-outline-variant/30">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-widest">
+            HB INDUSTRY [BATNA]
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Manufacture Algérienne de Mobilier Scientifique de Haute Résistance &amp; Équipements de Confinement Chimique.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1.5 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            ALL BATNA FABRICATION NODES OPERATIONAL
+          </span>
+<span>•</span>
+<span>LATENCY: 14MS</span>
+</div>
+</div>
+<!-- Links Grid from JSON Specifications -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#ingenierie">
+          Normes EN 13150 &amp; 14470-1
+        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#ingenierie">
+          Rapports d'Essais Métrologiques
+        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#deploiements">
+          Portail Fournisseurs Sonatrach
+        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#usine-batna">
+          Certifications ISO 9001:2015
+        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#usine-batna">
+          Politique R&amp;D Batna
+        </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#catalogue">
+          Plan du Site CAD
+        </a>
+</div>
+<!-- Bottom Copyright & Coordinates Bar (Immutable String from JSON) -->
+<div class="pt-6 border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-outline-variant">
+<div>
+          © 2025 EURL HB INDUSTRY GROUP. SOUVERAINETÉ INDUSTRIELLE &amp; FABRICATION DE PRÉCISION. BATNA, ALGÉRIE. COORD: 35.56°N 5.61°E. EN 13150 / ISO 9001 / EN 14470-1 CERTIFIED.
+        </div>
+<div class="flex items-center gap-4 text-[10px] text-outline">
+<span>R.C BATNA : 05/00-XXXXXXX</span>
+<span>N.I.F : 0005XXXXXXXXXXXXXXXX</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-container": "#3b2500",
+          "surface-dim": "#11131b",
+          "error-container": "#93000a",
+          "on-secondary-fixed": "#002022",
+          "tertiary": "#ffba48",
+          "on-tertiary-fixed": "#291800",
+          "secondary-fixed": "#7df4ff",
+          "surface-container-lowest": "#0c0e16",
+          "surface-container-high": "#282a32",
+          "secondary-fixed-dim": "#00dbe9",
+          "primary-fixed-dim": "#ffb1c5",
+          "primary": "#ffb1c5",
+          "inverse-primary": "#ba005c",
+          "on-primary": "#65002f",
+          "on-secondary": "#00363a",
+          "tertiary-fixed-dim": "#ffba48",
+          "tertiary-container": "#c38400",
+          "background": "#11131b",
+          "on-primary-fixed-variant": "#8f0045",
+          "on-surface-variant": "#e3bdc5",
+          "on-background": "#e2e1ee",
+          "tertiary-fixed": "#ffddb1",
+          "inverse-on-surface": "#2e3039",
+          "surface-container-low": "#191b24",
+          "primary-fixed": "#ffd9e1",
+          "on-secondary-container": "#00686f",
+          "on-primary-fixed": "#3f001b",
+          "on-error": "#690005",
+          "outline-variant": "#5b3f46",
+          "outline": "#aa888f",
+          "surface-container-highest": "#33343e",
+          "surface": "#11131b",
+          "on-secondary-fixed-variant": "#004f54",
+          "on-tertiary-fixed-variant": "#614000",
+          "surface-variant": "#33343e",
+          "error": "#ffb4ab",
+          "inverse-surface": "#e2e1ee",
+          "surface-bright": "#373942",
+          "on-tertiary": "#442b00",
+          "surface-tint": "#ffb1c5",
+          "secondary-container": "#00eefc",
+          "on-surface": "#e2e1ee",
+          "on-primary-container": "#590028",
+          "surface-container": "#1d1f28",
+          "secondary": "#d3fbff",
+          "primary-container": "#ff4a8e",
+          "on-error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1.5rem",
+          "gutter-mobile": "0.75rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1.25rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Space Grotesk"
+          ],
+          "label-telemetry-lg": [
+            "JetBrains Mono"
+          ],
+          "display-hero": [
+            "Anton"
+          ],
+          "headline-lg-mobile": [
+            "Anton"
+          ],
+          "display-hero-mobile": [
+            "Anton"
+          ],
+          "body-sm": [
+            "Space Grotesk"
+          ],
+          "body-lg": [
+            "Space Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Anton"
+          ],
+          "label-micro": [
+            "JetBrains Mono"
+          ],
+          "label-telemetry-sm": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-telemetry-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.1em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero": [
+            "72px",
+            {
+              "lineHeight": "76px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "44px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "48px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "0.05em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-micro": [
+            "9px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-telemetry-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.14em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-x-hidden"><div class="fixed inset-0 pointer-events-none z-0"><div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl"></div><div class="absolute top-1/3 -right-40 w-96 h-96 bg-secondary-container/5 rounded-full blur-3xl"></div><div class="absolute bottom-10 left-1/4 w-96 h-96 bg-tertiary-container/5 rounded-full blur-3xl"></div></div><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-2xl shadow-[0_8px_32px_-4px_rgba(0,238,252,0.08)]"><div class="w-full px-gutter-mobile lg:px-margin h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="HB Industry Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwhBOcP6I519O-wzmqD6xTL4elfyrCJYr6dREeQwA0ipxlhNArrb3IiKrp2vEFfubbopdkhwpNFOI4QCiu2KGgMY-wmi-mBta4-G5WOYbzz1h1Tea_KujoINc22Zrk9VLWzcZPb9NIDuC85LinMERXwcsc4fa4qlGBk7i0FecZ8ujabI6HYSt0_oAAF3Ubdi7qptK2DWgCLBhSO_eVD9IU5GZhUMK57H4HO48NhBgWlKb8fxTUk0m"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider leading-none">HB INDUSTRY</span><div class="flex items-center gap-space-xs mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span><span class="font-label-micro text-label-micro text-secondary-fixed tracking-widest uppercase">SYSTEM ONLINE // SECTOR ALGERIA</span></div></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm text-label-telemetry-sm rounded px-space-sm py-1 shadow-[0_0_15px_rgba(255,74,142,0.4)]"><a aria-current="page" class="transition-colors tracking-widest uppercase bg-primary-container text-on-primary-container font-headline-sm text-label-telemetry-sm rounded px-space-sm py-1 shadow-[0_0_15px_rgba(255,74,142,0.4)]" data-path="accueil" href="#">ACCUEIL</a><a class="font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:text-on-surface transition-colors tracking-widest uppercase" data-path="divisions-industrielles" href="#">DIVISIONS INDUSTRIELLES</a><a class="font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:text-on-surface transition-colors tracking-widest uppercase" data-path="infrastructures" href="#">INFRASTRUCTURES</a><a class="font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:text-on-surface transition-colors tracking-widest uppercase" data-path="technologies-ia" href="#">TECHNOLOGIES &amp; IA</a><a class="font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:text-on-surface transition-colors tracking-widest uppercase" data-path="projets" href="#">PROJETS</a><a class="font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:text-on-surface transition-colors tracking-widest uppercase" data-path="contact" href="#">CONTACT</a></nav><div class="flex items-center gap-space-md"><button aria-label="Toggle Audio Atmosphere" class="h-9 w-9 rounded flex items-center justify-center bg-surface-container-high text-secondary-fixed hover:bg-surface-container-highest hover:text-on-surface transition-colors shadow-[0_0_12px_rgba(0,238,252,0.15)]" type="button"><span class="material-symbols-outlined text-[18px]">volume_up</span></button><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2 rounded bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest shadow-[0_0_18px_rgba(255,74,142,0.35)] transition-all transform hover:-translate-y-0.5" data-path="demander-un-audit" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-2 animate-ping"></span>DEMANDER UN AUDIT</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_10px_rgba(255,177,197,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-yF3C0Il4YVfRQoOZbsv2Uv1CWXVWdEnSk5XuRTkhRn-lWbaHxpWCaPEPnk2ODJ9jJ_YNmsa750GJz1XpAZ__uhL-3cUZKjmZIgI_Xwr6f4ow-oQ_Mm6Y5y56J4w82zImsYKt10wp90xrQDijHsUwxLJSskPP4OMnGzLf8FJmYcaMRRblvt3MSpX7j51kA4SJ43KhVLzLgb48972DrAWgpUFpvdRYISmZ0e9iL1SEMflBQ3or8to_"/></div></div></header><main class="relative z-10 w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION: GTA VI Twilight Atmosphere & Heavy Industrial Scale -->
+<section class="relative w-full -mt-20 overflow-hidden bg-surface-container-lowest">
+<!-- Atmospheric Background Image with Cinematic Twilight Color Grading Scrim -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 transition-transform duration-1000 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyunvL8nfpz4QUHGHG0QSpHfVJo7WncCU2wdKfSVss4QbRrDL7yYhECt-21HpM7d-5Ylixew85JKh8adFjl9l5uzV4oZOv1b9nH_ja0Amh90oAXTYe-5VKiSTsyXikminFLJ4c4upaLI1JHBqZC3kSnV0zNHGvea3ToT6D7r9XazQ5SqkxnO-JUp_PS270l7PRhjZ4oBbUocCPXRJ9-mIxjDrr0PSINX5-DE3wj1lLUOqRlYVguvnI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-container-lowest/80 to-surface-container-lowest/60"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent"></div>
+<div class="absolute -top-32 right-12 w-96 h-96 bg-primary-container/20 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="absolute bottom-10 left-1/3 w-80 h-80 bg-secondary-container/15 rounded-full blur-[120px] pointer-events-none"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 w-full px-gutter-mobile lg:px-margin pt-36 pb-space-xl min-h-[92vh] flex flex-col justify-between">
+<!-- Top Telemetry Tag -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/80 backdrop-blur-md text-primary font-label-micro text-label-micro tracking-widest uppercase shadow-[0_0_15px_rgba(255,74,142,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+          GRID SECTOR 07 // HIGH-VELOCITY INFRASTRUCTURE
+        </span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low/80 backdrop-blur-md text-secondary-fixed font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          CORE FIRMWARE V4.88-PROD
+        </span>
+</div>
+<!-- Center Copy Matrix -->
+<div class="max-w-4xl space-y-space-md">
+<div class="space-y-space-xs">
+<p class="font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-[0.25em] text-secondary-fixed flex items-center gap-space-xs">
+<span class="w-2.5 h-0.5 bg-secondary-fixed"></span>
+            HEAVY INDUSTRIAL CAPABILITIES // AUTOMATION PROTOCOLS
+          </p>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero uppercase tracking-tight text-on-surface leading-none drop-shadow-2xl">
+            L'INGÉNIERIE LOURDE <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary-fixed">
+              NOUVELLE GÉNÉRATION
+            </span>
+</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Infrastructures intelligentes, robotique industrielle avancée et solutions énergétiques de classe mondiale conçues pour dominer les cadences de production de demain.
+        </p>
+<!-- CTA Cluster -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="group relative inline-flex items-center justify-center px-space-xl py-3.5 rounded bg-primary-container text-on-primary-container font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-widest shadow-[0_0_28px_rgba(255,74,142,0.55)] hover:shadow-[0_0_35px_rgba(0,238,252,0.7)] hover:bg-secondary-fixed transition-all duration-300 transform hover:-translate-y-0.5" href="#divisions">
+<span class="relative z-10 flex items-center gap-space-xs">
+              EXPLORER NOS RÉALISATIONS
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+</a>
+<button class="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded bg-surface-container-high/90 hover:bg-surface-container-highest text-secondary-fixed hover:text-on-surface font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider backdrop-blur-md transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            TÉLÉCHARGER LE CATALOGUE INDUSTRIEL [PDF]
+          </button>
+</div>
+</div>
+<!-- Live Telemetry Ticker Strip -->
+<div class="mt-space-xl pt-space-md grid grid-cols-2 md:grid-cols-4 gap-space-md bg-surface-container-lowest/80 backdrop-blur-2xl p-space-md rounded-xl shadow-[0_8px_32px_-4px_rgba(0,0,0,0.8)]">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-on-surface-variant uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span> TONNAGE ANNUEL
+          </div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">+250,000 T</div>
+<span class="font-body-sm text-body-sm text-secondary-fixed">Capacité brute métallurgique</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-on-surface-variant uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> AUTOMATISATION
+          </div>
+<div class="font-headline-md text-headline-md text-primary tracking-tight font-bold">99.8%</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lignes robotisées SCADA</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-on-surface-variant uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> MAILLAGE TERRITORIAL
+          </div>
+<div class="font-headline-md text-headline-md text-tertiary tracking-tight font-bold">14 SITES</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hubs portuaires &amp; usines</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-on-surface-variant uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span> QUALITÉ &amp; HSSE
+          </div>
+<div class="font-headline-md text-headline-md text-secondary-fixed-dim tracking-tight font-bold">0 INCIDENT</div>
+<span class="font-body-sm text-body-sm text-secondary-fixed">Score de sécurité certifié 2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION DIVISIONS INDUSTRIELLES: Tactile Asymmetric Cards -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-background relative overflow-hidden" id="divisions">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm font-label-telemetry-sm text-label-telemetry-sm text-primary uppercase tracking-[0.2em]">
+<span>[DIV-01 // DIV-04]</span>
+<span class="w-8 h-px bg-primary"></span>
+<span>CAPACITÉS HAUTE PUISSANCE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase tracking-wide text-on-surface">
+            PÔLES D'EXCELLENCE &amp; DIVISIONS OPÉRATIONNELLES
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Chaque unité industrielle fonctionne en réseau cyber-physique unifié, garantissant une flexibilité d'usinage et une traçabilité totale des flux.
+        </p>
+</div>
+<!-- 4 High-Tech Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Division 01 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_8px_30px_rgba(255,74,142,0.2)]">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-primary tracking-widest font-bold">01 // HEAVY STEEL</span>
+<span class="material-symbols-outlined text-primary text-[24px]">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Métallurgie &amp; Structures Lourdes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Aciéries robotisées, découpe laser à plasma 40kW et confection de charpentes mégastructurelles certifiées pour charges sismiques extrêmes.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-micro text-label-micro text-secondary-fixed">
+<span class="uppercase">TOLÉRANCE: ±0.05 MM</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<!-- Division 02 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_8px_30px_rgba(0,238,252,0.2)]">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-secondary-fixed tracking-widest font-bold">02 // CYBER-BOTS</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">smart_toy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Robotique &amp; Lignes Automatisées</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Bras polyarticulés gantry, soudure laser autonome assistée par ordinateur et guidage optique haute fréquence pour cadences ultra-rapides.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-micro text-label-micro text-secondary-fixed">
+<span class="uppercase">CYCLE TIME: -42%</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<!-- Division 03 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_8px_30px_rgba(255,186,72,0.2)]">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-tertiary tracking-widest font-bold">03 // HIGH VOLTAGE</span>
+<span class="material-symbols-outlined text-tertiary text-[24px]">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Énergie &amp; Systèmes de Puissance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Centrales hybrides de secours, sous-stations 400kV et régulation thermique avancée pour environnements industriels sévères.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-micro text-label-micro text-tertiary">
+<span class="uppercase">CAPACITÉ: 850 MW</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<!-- Division 04 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-[0_8px_30px_rgba(255,74,142,0.2)]">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-primary tracking-widest font-bold">04 // CARGO HUBS</span>
+<span class="material-symbols-outlined text-primary text-[24px]">anchor</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Logistique Portuaire &amp; Hubs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Grues de quai électrifiées, portiques STS automatisés et gestion prédictive de transit fret multimodal en Méditerranée et Afrique du Nord.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-micro text-label-micro text-secondary-fixed">
+<span class="uppercase">DÉBIT: 3,200 TEU/J</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION INFRASTRUCTURE HYPER-RÉALISTE & VISITE VIRTUELLE: Live HUD Split -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-lowest relative overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Interactive Cinematic HUD Viewport -->
+<div class="lg:col-span-7 relative rounded-2xl overflow-hidden shadow-[0_12px_45px_rgba(0,0,0,0.9)] bg-surface-container">
+<!-- Live HUD Overlay Header -->
+<div class="absolute top-0 inset-x-0 z-20 px-space-md py-space-sm bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-telemetry-sm text-label-telemetry-sm text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span>CAM-04 FEED LIVE // AUTOMATION ZONE A</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant uppercase">REC [4K 60FPS]</span>
+</div>
+<!-- Viewport Visual -->
+<div class="relative w-full aspect-[16/10] overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzsMYY5Fr2JIHzYUJnZWtouI0Dx-dspd2EJ0jY_iH8OSVpmyGf0eZRqZGYYHGoVtI4nDff8zwB7albEDHIAXUXQtIRzCdqTev_TIIm5C2vs-pgpyXsH4if_vNtIahPgIJLke5_gf_AOjP6CXcWKxMSR0w27lfV2gAN6-EVxNa7L64ITnUBgidATSHJa8cM_lsXHsO3870xbNaP5jGBn0yKVQleGLH8kw_Tr_b8mEiVM6YZxNgmvQ2u')"></div>
+<!-- Crosshairs & Coordinate Graphic Overlays -->
+<div class="absolute inset-0 pointer-events-none p-space-md flex flex-col justify-between">
+<div class="flex justify-between items-start opacity-70">
+<span class="font-label-micro text-label-micro text-secondary-fixed">LAT: 36°45'13.7"N</span>
+<span class="font-label-micro text-label-micro text-secondary-fixed">LON: 3°03'31.6"E</span>
+</div>
+<!-- Optical Center Reticle SVG -->
+<div class="self-center flex flex-col items-center opacity-40">
+<svg class="text-secondary-fixed" fill="none" height="60" viewbox="0 0 60 60" width="60">
+<circle cx="30" cy="30" r="28" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></circle>
+<path d="M30 10V20M30 40V50M10 30H20M40 30H50" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="flex justify-between items-end opacity-70">
+<span class="font-label-micro text-label-micro text-tertiary">THERMAL CORE: NORMAL (42°C)</span>
+<span class="font-label-micro text-label-micro text-primary">STS CRANE 02 // ENGAGED</span>
+</div>
+</div>
+<!-- Hotspot Ping Interactive Markers -->
+<button aria-label="Inspect Crane" class="absolute top-1/3 left-1/4 w-8 h-8 rounded-full bg-primary-container/30 flex items-center justify-center animate-pulse hover:scale-125 transition-transform cursor-pointer" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_#ff4a8e]"></span>
+</button>
+<button aria-label="Inspect Terminal" class="absolute bottom-1/4 right-1/3 w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center animate-pulse hover:scale-125 transition-transform cursor-pointer" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary-fixed shadow-[0_0_12px_#7df4ff]"></span>
+</button>
+</div>
+<!-- Viewport Bottom Status Bar -->
+<div class="p-space-sm bg-surface-container-high/90 flex flex-wrap items-center justify-between gap-space-xs font-label-telemetry-sm text-label-telemetry-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">speed</span>
+<span>CYCLE TIME CRANE: 74 SEC</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span>
+<span>ÉNERGIE RÉGÉNÉRATIVE: 94%</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">wifi_tethering</span>
+<span>PING TÉLÉMÉTRIE: 4MS</span>
+</div>
+</div>
+</div>
+<!-- Right: Technical Specification Panel -->
+<div class="lg:col-span-5 space-y-space-lg">
+<div class="space-y-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary-fixed uppercase tracking-widest">
+            FACILITÉS PORTUAIRES &amp; LOURDES
+          </span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface leading-none">
+            SUPER-TERMINAL HYBRIDE ALGER SUD
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            Conçu pour éliminer les goulots d’étranglement de la logistique méditerranéenne, ce hub concentre plus de 18 portiques automatisés et un système d’intelligence artificielle prédictive de déchargement.
+          </p>
+</div>
+<!-- Metric Specs Strip -->
+<div class="space-y-space-sm">
+<!-- Metric 1 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">120 Tonnes</span>
+<span class="font-label-micro text-label-micro text-primary uppercase">CAPACITÉ DE LEVAGE BRUT</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[85%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">-42% Temps de Cycle</span>
+<span class="font-label-micro text-label-micro text-secondary-fixed uppercase">IA D'ALIGNEMENT LASER</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full w-[94%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-tertiary">ISO-50001</span>
+<span class="font-label-micro text-label-micro text-tertiary uppercase">EMPREINTE CARBONE MINIMISÉE</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[78%]"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-primary hover:text-on-surface transition-colors" href="#audit">
+<span>PLANIFIER UNE VISITE TECHNIQUE SUR SITE</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION INNOVATION & TECH STACK: Industrial Cybernetics Blueprint -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-background relative">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary uppercase tracking-[0.25em]">SYSTÈMES CYBER-PHYSIQUES</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface">
+          TECHNOLOGIES CRITIQUES DÉPLOYÉES
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Chaque ligne d'assemblage et pôle énergétique est relié en fibre noire au noyau d'analyse prédictive HB-SYNX.
+        </p>
+</div>
+<!-- Tech Feature Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Blueprint 01 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low space-y-space-md hover:bg-surface-container transition-all duration-200">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary-fixed shadow-[0_0_15px_rgba(0,238,252,0.2)]">
+<span class="material-symbols-outlined text-[28px]">query_stats</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-micro text-label-micro text-secondary-fixed">MODULE PROTOCOL SYNX-A</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Maintenance Prédictive par IA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Surveillance continue des micro-vibrations sur les turbines, détection d'usure des roulements 340 heures avant rupture critique.
+            </p>
+</div>
+<!-- Mini SVG Telemetry Sparkline -->
+<div class="pt-space-xs">
+<div class="flex justify-between font-label-micro text-label-micro text-on-surface-variant mb-1">
+<span>PRÉCISION VIBRATOIRE</span>
+<span class="text-secondary-fixed font-bold">99.4%</span>
+</div>
+<svg class="w-full h-8 text-secondary-fixed" fill="none" viewbox="0 0 200 40">
+<path d="M0 25 L30 25 L45 8 L60 35 L75 22 L110 22 L125 12 L140 30 L160 18 L200 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Blueprint 02 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low space-y-space-md hover:bg-surface-container transition-all duration-200">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_15px_rgba(255,74,142,0.2)]">
+<span class="material-symbols-outlined text-[28px]">view_in_ar</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-micro text-label-micro text-primary">MODULE PROTOCOL SYNX-B</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Jumeaux Numériques 3D Temps Réel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Reproduction isométrique intégrale de nos usines avec simulation de charge et flux de matière avant tout changement d'outillage lourd.
+            </p>
+</div>
+<!-- Mini SVG Radial Chart -->
+<div class="pt-space-xs flex items-center gap-space-md">
+<svg class="w-12 h-12 text-primary" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="88, 100" stroke-width="3"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface font-bold">88% FLUX OPTIMISÉ</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">SIMULATION IN SILICO</span>
+</div>
+</div>
+</div>
+<!-- Blueprint 03 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low space-y-space-md hover:bg-surface-container transition-all duration-200">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-tertiary shadow-[0_0_15px_rgba(255,186,72,0.2)]">
+<span class="material-symbols-outlined text-[28px]">security</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-micro text-label-micro text-tertiary">MODULE PROTOCOL SYNX-C</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Supervision SCADA Souveraine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Réseaux de télégestion étanches (air-gapped), redondance satellitaire multi-orbite et conformité aux normes militaires de résilience.
+            </p>
+</div>
+<!-- Micro Status Grid -->
+<div class="pt-space-xs grid grid-cols-2 gap-space-xs font-label-micro text-label-micro">
+<div class="p-1 rounded bg-surface-container flex items-center justify-between text-secondary-fixed">
+<span>AIR-GAP</span>
+<span class="font-bold">ACTIF</span>
+</div>
+<div class="p-1 rounded bg-surface-container flex items-center justify-between text-tertiary">
+<span>CHIP ID</span>
+<span class="font-bold">TPM 2.0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION CLIENTS & CERTIFICATIONS DE CLASSE MONDIALE -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto space-y-space-lg">
+<!-- Certifications Badge Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-secondary-fixed tracking-widest uppercase">STANDARDS INTERNATIONAUX VALIDÉS</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">CONFORMITÉ OPÉRATIONNELLE ABSOLUE</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="px-space-md py-1.5 rounded bg-surface-container text-on-surface font-label-telemetry-sm text-label-telemetry-sm">ISO 9001:2015</span>
+<span class="px-space-md py-1.5 rounded bg-surface-container text-on-surface font-label-telemetry-sm text-label-telemetry-sm">ISO 14001:2018</span>
+<span class="px-space-md py-1.5 rounded bg-surface-container text-on-surface font-label-telemetry-sm text-label-telemetry-sm">ISO 45001:2020</span>
+<span class="px-space-md py-1.5 rounded bg-surface-container text-primary font-label-telemetry-sm text-label-telemetry-sm">API SPEC Q1</span>
+<span class="px-space-md py-1.5 rounded bg-surface-container text-secondary-fixed font-label-telemetry-sm text-label-telemetry-sm">CE ACCREDITED</span>
+</div>
+</div>
+<!-- Testimonial Heavy Industry Quote -->
+<div class="p-space-xl rounded-xl bg-surface-container relative overflow-hidden flex flex-col md:flex-row items-center gap-space-xl">
+<div class="flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[64px]">format_quote</span>
+</div>
+<div class="space-y-space-sm flex-1">
+<p class="font-body-lg text-body-lg text-on-surface italic">
+            "La cadence de transformation métallurgique et la rigueur d'exécution démontrées par HB Industry ont permis de réduire notre calendrier de raccordement portuaire de 5 mois. Leur intégration de robotique lourde et d'IA opérationnelle est sans équivalent dans le bassin méditerranéen."
+          </p>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface font-bold uppercase">DIRECTEUR DES MÉGA-INFRASTRUCTURES ÉNERGÉTIQUES</span>
+<span class="text-on-surface-variant font-label-micro text-label-micro">// CONSORTIUM TRANS-MÉDITERRANÉEN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGH CONVERSION CTA BANNER: Deep Obsidian & Neon Magenta -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-background relative overflow-hidden" id="audit">
+<!-- Atmospheric Glows -->
+<div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary-container/20 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-secondary-container/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto rounded-2xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-[0_16px_50px_rgba(255,74,142,0.18)] relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Pitch & Quick Stats -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="flex items-center gap-space-xs font-label-telemetry-sm text-label-telemetry-sm text-primary uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+            DISPONIBILITÉ TECHNIQUE IMMÉDIATE
+          </div>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface leading-tight">
+            PRÊT À INDUSTRIALISER <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-fixed">
+              VOS AMBITIONS ?
+            </span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Sollicitez nos directeurs de programmes d'ingénierie pour un audit complet de vos chaînes d'assemblage, structures métalliques ou systèmes énergétiques. Réponse garantie sous 24 heures ouvrées.
+          </p>
+<div class="pt-space-xs flex flex-wrap items-center gap-space-lg font-label-telemetry-sm text-label-telemetry-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed">call</span>
+<span>LIGNE DIRECTE HQ: +213 21 00 44 90</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>APPELS-OFFRES@HB-INDUSTRY.COM</span>
+</div>
+</div>
+</div>
+<!-- Right: Express RFP Form -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg rounded-xl shadow-2xl">
+<div class="space-y-space-sm mb-space-md">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-primary uppercase font-bold tracking-wider">
+              FORMULAIRE EXPRESS D'APPEL D'OFFRES
+            </span>
+<p class="font-label-micro text-label-micro text-on-surface-variant uppercase">
+              TRANSMISSION SÉCURISÉE PROTOCOLE TLS 1.3
+            </p>
+</div>
+<form class="space-y-space-sm" onsubmit="event.preventDefault(); alert('DEMANDE D\'AUDIT TRANSMIS AU CENTRE DE COMMANDE. ID TICKET: HB-8942');">
+<div>
+<label class="block font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase mb-1">
+                NOM ET FONCTION
+              </label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:bg-surface-container-highest transition-colors font-body-sm text-body-sm" placeholder="ex: Dr. Karim Belkacem - Directeur Projets" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase mb-1">
+                ORGANISATION / COMPAGNIE
+              </label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:bg-surface-container-highest transition-colors font-body-sm text-body-sm" placeholder="ex: Société Nationale de Raffinage" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase mb-1">
+                DIVISION D'INTERVENTION REQUISE
+              </label>
+<select class="w-full px-space-md py-2.5 rounded bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-highest transition-colors font-body-sm text-body-sm cursor-pointer">
+<option>01. Métallurgie &amp; Structures Lourdes</option>
+<option>02. Robotique &amp; Lignes Automatisées</option>
+<option>03. Énergie &amp; Systèmes de Puissance</option>
+<option>04. Logistique Industrielle Portuaire</option>
+<option>Consortium Multi-Disciplinaire</option>
+</select>
+</div>
+<div class="pt-space-xs">
+<button class="w-full py-3.5 rounded bg-primary-container hover:bg-secondary-fixed text-on-primary-container font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-widest shadow-[0_0_24px_rgba(255,74,142,0.5)] hover:shadow-[0_0_30px_rgba(0,238,252,0.6)] transition-all duration-300 font-bold" type="submit">
+                INITIALISER LA PROCÉDURE D'AUDIT
+              </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest shadow-[0_-8px_32px_-4px_rgba(0,0,0,0.5)]"><div class="w-full px-gutter-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="HB Industry Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwhBOcP6I519O-wzmqD6xTL4elfyrCJYr6dREeQwA0ipxlhNArrb3IiKrp2vEFfubbopdkhwpNFOI4QCiu2KGgMY-wmi-mBta4-G5WOYbzz1h1Tea_KujoINc22Zrk9VLWzcZPb9NIDuC85LinMERXwcsc4fa4qlGBk7i0FecZ8ujabI6HYSt0_oAAF3Ubdi7qptK2DWgCLBhSO_eVD9IU5GZhUMK57H4HO48NhBgWlKb8fxTUk0m"/><span class="font-headline-sm text-headline-sm uppercase text-on-surface">HB INDUSTRY</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Infrastructure industrielle lourde, automatisation avancée et méga-projets d'ingénierie énergétique pour le continent africain et les corridors mondiaux.</p><div class="flex items-center gap-space-sm font-label-micro text-label-micro text-secondary-fixed"><span class="material-symbols-outlined text-[14px]">verified</span><span>ISO 9001:2015 // OHSAS 18001 COMPLIANT</span></div></div><div class="space-y-space-md"><div class="font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-widest text-primary">PÔLES OPÉRATIONNELS</div><ul class="space-y-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer flex items-center gap-space-xs"><span class="text-primary text-[10px]">&gt;</span> Métallurgie Lourde &amp; Aciéries</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer flex items-center gap-space-xs"><span class="text-primary text-[10px]">&gt;</span> Robotique &amp; Systèmes Autonomes</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer flex items-center gap-space-xs"><span class="text-primary text-[10px]">&gt;</span> Infrastructures Pétrochimiques</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer flex items-center gap-space-xs"><span class="text-primary text-[10px]">&gt;</span> Réseaux Électriques Haute Tension</li></ul></div><div class="space-y-space-md"><div class="font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-widest text-tertiary">TÉLÉMÉTRIE GLOBALE</div><div class="space-y-space-xs"><div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between"><span class="font-label-micro text-label-micro text-on-surface-variant">LATITUDE / LONGITUDE</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary-fixed">36°45'N / 3°03'E</span></div><div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between"><span class="font-label-micro text-label-micro text-on-surface-variant">DISPONIBILITÉ RÉSEAU</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary-fixed">99.98% OPTIMAL</span></div><div class="p-space-sm rounded bg-surface-container-low flex items-center justify-between"><span class="font-label-micro text-label-micro text-on-surface-variant">SÉCURITÉ INDUSTRIELLE</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary">DEFCON 4 // CALME</span></div></div></div><div class="space-y-space-md"><div class="font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-widest text-on-surface">POSTES DE CONTRÔLE</div><div class="flex flex-wrap gap-space-xs"><span class="px-space-sm py-1 rounded bg-surface-container font-label-micro text-label-micro text-on-surface-variant">ALGER HQ</span><span class="px-space-sm py-1 rounded bg-surface-container font-label-micro text-label-micro text-on-surface-variant">ORAN HUBS</span><span class="px-space-sm py-1 rounded bg-surface-container font-label-micro text-label-micro text-on-surface-variant">HASSI MESSAOUD</span><span class="px-space-sm py-1 rounded bg-surface-container font-label-micro text-label-micro text-on-surface-variant">SKIKDA REFINERY</span></div><div class="pt-space-xs flex items-center gap-space-md text-on-surface-variant"><span class="material-symbols-outlined hover:text-secondary-fixed cursor-pointer transition-colors">public</span><span class="material-symbols-outlined hover:text-secondary-fixed cursor-pointer transition-colors">hub</span><span class="material-symbols-outlined hover:text-secondary-fixed cursor-pointer transition-colors">dataset</span><span class="material-symbols-outlined hover:text-secondary-fixed cursor-pointer transition-colors">terminal</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-micro text-label-micro text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span>© 2025 HB INDUSTRY CONGLOMERATE. TOUS DROITS RÉSERVÉS.</span><a class="hover:text-on-surface transition-colors" data-path="mentions-legales" href="#">MENTIONS LÉGALES</a><a class="hover:text-on-surface transition-colors" data-path="conformite" href="#">CONFORMITÉ ISO</a><a class="hover:text-on-surface transition-colors" data-path="securite" href="#">SÉCURITÉ DES SYSTÈMES</a></div><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span><span class="text-secondary-fixed uppercase tracking-wider font-label-telemetry-sm text-label-telemetry-sm">TEMPS EN LIGNE: 14,892H 44M 12S</span></div></div></div></footer></body></html>

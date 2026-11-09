@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+
+# Agents & AI workspaces
+.agents/
+
+# Scratch & Inspect directories
+inspect_frames/
+temp_raw/
+terminal_clone/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp

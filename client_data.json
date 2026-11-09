@@ -1,0 +1,147 @@
+{
+  "company": {
+    "name": "HB Industry Group",
+    "legal_name": "EURL HB Industry Group",
+    "acronym": "HBIG",
+    "slogan_fr": "L'excellence ne se promet pas, elle se réalise ! Votre exigence, notre engagement.",
+    "slogan_ar": "التميز لا يوعد به، بل يتحقق! متطلباتكم، التزامنا.",
+    "activity": "Étude, conception et fabrication sur mesure d'équipements et mobilier de laboratoire, rayonnage industriel et sièges techniques",
+    "category": "Équipements et mobilier pour laboratoires, hôpitaux, universités et industrie pharmaceutique / chimique / agroalimentaire",
+    "location": {
+      "country": "Algérie",
+      "wilaya": "Batna",
+      "city": "N'Gaous",
+      "district": "Cité Lehnancha (Quartier LHnancha)"
+    },
+    "contacts": {
+      "phones": [
+        "0775 55 87 28",
+        "0550 02 58 47"
+      ],
+      "whatsapp": "+213 775 55 87 28",
+      "email": "hbig.dz@gmail.com",
+      "viber": "0775 55 87 28",
+      "telegram": "0775 55 87 28"
+    },
+    "social_and_web": {
+      "facebook_page": "https://www.facebook.com/hbig.dz",
+      "facebook_page_id": "100077043934139",
+      "facebook_followers": "2.5K+",
+      "ouedkniss_store": "https://www.ouedkniss.com/store/24762/hb-industry-group",
+      "ouedkniss_store_id": "24762",
+      "old_domain_status": "hbigalgeria.com (expiré / piraté par spam externe, nécessite un nouveau site sécurisé)"
+    },
+    "branding": {
+      "primary_color": "#0a6aa5",
+      "secondary_color": "#7ca6bd",
+      "background_clean": "#fafbff",
+      "accent_safety": "#e05638",
+      "logo_hd": "assets/logo/ouedkniss_logo.jpg",
+      "logo_profile": "assets/logo/facebook_profile_logo.jpg",
+      "banners": [
+        "assets/banners/banner_1.png",
+        "assets/banners/banner_2.jpg"
+      ]
+    }
+  },
+  "materials_and_standards": [
+    "Résines phénoliques et thermodurcissables (anti-acides, solvants et haute température)",
+    "Polypropylène massif (haute résistance chimique pour cuves, éviers et plans)",
+    "Verre trempé émaillé ou sécurit pour postes spécifiques",
+    "Structures mécano-soudées en tube d'acier carré/rectangulaire traité anti-corrosion",
+    "Revêtement poudre époxy cuite au four (résistance aux agressions chimiques et aux chocs)",
+    "Robinetterie technique de laboratoire (eau froide/chaude, gaz, vide, azote)",
+    "Systèmes d'aspiration et de ventilation intégrés",
+    "Production 100% locale en Algérie (Made in Algeria / صناعة محلية)"
+  ],
+  "product_lines": [
+    {
+      "id": "paillasses_centrales_murales",
+      "name": "Paillasses de Laboratoire (Centrales & Murales)",
+      "target": "Laboratoires de recherche, contrôle qualité, industrie pharmaceutique, agroalimentaire, universités",
+      "features": [
+        "Conception sur mesure selon les plans des locaux",
+        "Piétement en H ou en C autoportant métallique avec vérins de réglage de niveau",
+        "Plans de travail au choix : Résine phénolique / Polypropylène / Verre trempé / Céramique",
+        "Dosserets, étagères pour réactifs (tablettes simples ou doubles)",
+        "Goulottes électriques intégrées avec prises 220V/380V protégées",
+        "Cuves et éviers en polypropylène avec siphons anti-acides et robinetterie col de cygne"
+      ],
+      "photo_count": 9,
+      "photos_prefix": "assets/products/paillasse_laboratoire_centrale_murale_"
+    },
+    {
+      "id": "armoires_securite_coupe_feu",
+      "name": "Armoires de Sécurité Coupe-Feu",
+      "target": "Stockage sécurisé des solvants, produits inflammables et carburants",
+      "features": [
+        "Structure double paroi isolée ignifuge",
+        "Portes battantes avec serrure sécurisée à clé",
+        "Bacs de rétention étanches en partie basse",
+        "Étagères perforées réglables en hauteur pour égouttement",
+        "Système de fermeture automatique en cas d'élévation thermique (fusible thermique)",
+        "Orifices de ventilation avec pare-flammes pour raccordement extraction"
+      ],
+      "photo_count": 5,
+      "photos_prefix": "assets/products/armoire_securite_coupe_feu_"
+    },
+    {
+      "id": "armoires_ventilees_chimiques",
+      "name": "Armoires Ventilées pour Produits Chimiques & Corrosifs",
+      "target": "Stockage d'acides forts, bases, réactifs volatils et produits toxiques",
+      "features": [
+        "Caisson résistant aux vapeurs agressives",
+        "Portes vitrées sécurisées avec serrures indépendantes",
+        "Compartiments étanches pour séparation incompatibilités acides/bases",
+        "Raccordement d'extraction sur le dessus pour extraction continue vers l'extérieur ou filtre charbon",
+        "Bacs et étagères de rétention en polypropylène anti-corrosion"
+      ],
+      "photo_count": 10,
+      "photos_prefix": "assets/products/armoire_ventilee_produits_chimiques_"
+    },
+    {
+      "id": "paillasses_scolaires_scientifiques",
+      "name": "Paillasses Scolaires & Tables Scientifiques d'Enseignement",
+      "target": "Écoles primaires, collèges, lycées, centres de formation, salles de TP de sciences physiques, chimie et SVT",
+      "features": [
+        "Tables 2 ou 4 élèves robustes et anti-basculement",
+        "Surfaces mélaminées haute résistance ou résine facile à nettoyer",
+        "Robinetterie eau et gaz avec robinets de sécurité à bouton poussoir / quart de tour",
+        "Éviers compacts intégrés",
+        "Emplacements pour tabourets et casiers",
+        "Structure acier thermolaqué résistant à l'usage intensif scolaire"
+      ],
+      "photo_count": 20,
+      "photos_prefix": "assets/products/paillasse_scolaire_"
+    },
+    {
+      "id": "paillasses_bureautique_technique",
+      "name": "Mobilier Bureautique Technique & Postes Informatiques de Labo",
+      "target": "Salles de calcul, bureaux de chefs de laboratoire, postes de saisie et instrumentation",
+      "features": [
+        "Surfaces ergonomiques avec passage de câbles",
+        "Caissons mobiles et armoires de classement assorties",
+        "Finition professionnelle harmonisée avec l'espace de laboratoire"
+      ],
+      "photo_count": 12,
+      "photos_prefix": "assets/products/paillasse_laboratoire_bureautique_"
+    },
+    {
+      "id": "securite_urgences_chaises",
+      "name": "Équipements de Sécurité d'Urgence & Sièges Spécialisés",
+      "target": "Tout environnement à risques chimiques et biologiques",
+      "features": [
+        "Douches de sécurité combinées avec lave-yeux",
+        "Lave-yeux muraux ou sur paillasse en ABS jaune haute visibilité",
+        "Bras d'aspiration articulés localisés pour vapeurs et fumées",
+        "Sièges et tabourets de laboratoire antistatiques, lavables, réglables en hauteur"
+      ]
+    }
+  ],
+  "stats": {
+    "total_images_collected": 96,
+    "product_hd_photos": 56,
+    "facebook_project_photos": 36,
+    "logos_and_banners": 4
+  }
+}

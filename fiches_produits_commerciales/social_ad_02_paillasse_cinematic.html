@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>HB Industry Group - Social Ad Paillasse Centrale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1080px;
+    height: 1350px;
+    overflow: hidden;
+    background: #030712;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ad-canvas {
+    position: relative;
+    width: 1080px;
+    height: 1350px;
+    background: #060b13;
+    overflow: hidden;
+  }
+
+  /* Cinematic Photo Background */
+  .hero-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1080px;
+    height: 1350px;
+    object-fit: cover;
+    object-position: center 30%;
+    z-index: 1;
+  }
+
+  /* Vignettes */
+  .vignette-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(180deg, 
+      rgba(3, 7, 18, 0.95) 0%, 
+      rgba(3, 7, 18, 0.75) 45%, 
+      rgba(3, 7, 18, 0.0) 100%);
+    z-index: 2;
+  }
+  .vignette-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(0deg, 
+      rgba(3, 7, 18, 0.98) 0%, 
+      rgba(3, 7, 18, 0.90) 40%, 
+      rgba(3, 7, 18, 0.65) 70%, 
+      rgba(3, 7, 18, 0.0) 100%);
+    z-index: 2;
+  }
+
+  /* Blue Glow Flare */
+  .flare-blue {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.22) 0%, rgba(2, 132, 199, 0) 70%);
+    z-index: 2;
+    filter: blur(60px);
+  }
+
+  /* Top Navigation Bar */
+  .top-bar {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    right: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  .brand-pill {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 22px 10px 14px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  .brand-logo {
+    height: 38px;
+    width: auto;
+    border-radius: 8px;
+  }
+  .brand-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+  }
+  .brand-tag {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #38bdf8;
+    text-transform: uppercase;
+  }
+  .cert-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14, 165, 233, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #e0f2fe;
+    letter-spacing: 0.5px;
+  }
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    box-shadow: 0 0 10px #0ea5e9;
+  }
+
+  /* Interactive Floating Spec Callouts */
+  .callout-pin {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .pin-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.3), 0 0 15px #38bdf8;
+    flex-shrink: 0;
+  }
+  .pin-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  .pin-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .pin-desc {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .pin-bench-1 { top: 270px; right: 70px; }
+  .pin-bench-2 { top: 480px; left: 55px; flex-direction: row-reverse; }
+  .pin-bench-3 { top: 680px; right: 80px; }
+
+  /* Main Hero Copy */
+  .hero-content {
+    position: absolute;
+    bottom: 230px;
+    left: 50px;
+    right: 50px;
+    z-index: 10;
+  }
+  .eyebrow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, rgba(2, 132, 199, 0.25), rgba(2, 132, 199, 0.05));
+    border-left: 3px solid #0284c7;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #7dd3fc;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .headline-main {
+    font-family: 'Syne', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: #ffffff;
+  }
+  .headline-main span {
+    background: linear-gradient(90deg, #38bdf8 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle-lead {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #cbd5e1;
+    max-width: 840px;
+  }
+
+  /* Telemetry Grid (3 Glass Cards) */
+  .telemetry-row {
+    position: absolute;
+    bottom: 125px;
+    left: 50px;
+    right: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    z-index: 10;
+  }
+  .telemetry-card {
+    background: rgba(15, 23, 42, 0.78);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  }
+  .telem-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: #38bdf8;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .telem-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* Bottom Conversion Action Bar */
+  .action-bar {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  .contact-chips {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .phone-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 12px 18px;
+    border-radius: 12px;
+  }
+  .phone-icon-glow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(14, 165, 233, 0.4);
+  }
+  .phone-icon-glow svg {
+    width: 14px;
+    height: 14px;
+    fill: #ffffff;
+  }
+  .phone-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+  .cta-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-family: 'Syne', sans-serif;
+    font-size: 14.5px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.45);
+  }
+  .cta-button svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+  }
+</style>
+</head>
+<body>
+<div class="ad-canvas">
+  <!-- Cinematic Hero Photo -->
+  <img class="hero-photo" src="../assets/generated_products/cinematic_workbench_hero.jpg" alt="Paillasse centrale de laboratoire">
+
+  <!-- Vignettes -->
+  <div class="vignette-top"></div>
+  <div class="vignette-bottom"></div>
+  <div class="flare-blue"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="brand-pill">
+      <img class="brand-logo" src="../assets/logo/hbig_logo_clean.png" alt="HBIG">
+      <div class="brand-info">
+        <div class="brand-name">HB INDUSTRY GROUP</div>
+        <div class="brand-tag">Étude & Conception Sur-Mesure</div>
+      </div>
+    </div>
+    <div class="cert-pill">
+      <div class="pulse-dot"></div>
+      CHÂSSIS MÉCANO-SOUDÉ 60x40
+    </div>
+  </div>
+
+  <!-- Interactive Pins on the Product -->
+  <div class="callout-pin pin-bench-1">
+    <div class="pin-dot"></div>
+    <div class="pin-card">
+      <div class="pin-title">SUPERSTRUCTURE</div>
+      <div class="pin-desc">Étagères réactifs & éclairage LED</div>
+    </div>
+  </div>
+
+  <div class="callout-pin pin-bench-2">
+    <div class="pin-dot"></div>
+    <div class="pin-card">
+      <div class="pin-title">PLAN PHÉNOLIQUE 20MM</div>
+      <div class="pin-desc">Immunité chimique totale 99.8%</div>
+    </div>
+  </div>
+
+  <div class="callout-pin pin-bench-3">
+    <div class="pin-dot"></div>
+    <div class="pin-card">
+      <div class="pin-title">FLUIDES INTÉGRÉS</div>
+      <div class="pin-desc">Robinets triples & éviers PP</div>
+    </div>
+  </div>
+
+  <!-- Main Hero Copy -->
+  <div class="hero-content">
+    <div class="eyebrow-badge">MOBILIER TECHNIQUE HAUTE PRÉCISION</div>
+    <div class="headline-main">L'EXCELLENCE INDUSTRIELLE.<br><span>AU MILLIMÈTRE.</span></div>
+    <div class="subtitle-lead">
+      Paillasse centrale double îlot modulaire conçue pour la recherche de pointe. Monolithe en résine phénolique Trepsa 20mm, thermolaquage époxy 220°C et distribution technique complète (eau, gaz, électricité IP55).
+    </div>
+  </div>
+
+  <!-- Telemetry Row -->
+  <div class="telemetry-row">
+    <div class="telemetry-card">
+      <div class="telem-val">850 KG/M²</div>
+      <div class="telem-label">Charge utile certifiée</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="telem-val">TREPSA 20MM</div>
+      <div class="telem-label">Résine inaltérable</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="telem-val">BATNA 🇩🇿</div>
+      <div class="telem-label">Fabrication sur-mesure</div>
+    </div>
+  </div>
+
+  <!-- Action Bar -->
+  <div class="action-bar">
+    <div class="contact-chips">
+      <div class="phone-chip">
+        <div class="phone-icon-glow">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div class="phone-numbers">0775 55 87 28 / 0550 02 58 47</div>
+      </div>
+    </div>
+    <div class="cta-button">
+      Étude 3D & Chiffrage Offert
+      <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>

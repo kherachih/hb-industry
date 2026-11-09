@@ -1,0 +1,1 @@
+import{h as s,i as o,a as t,b as a,o as n,_ as i}from"./B4erEYb0.js";const r={class:"page"},c=s({__name:"config",setup(_){return o({title:"Config | Terminal Industries"}),(d,e)=>(n(),t("div",r,e[0]||(e[0]=[a("div",null,"Config here",-1)])))}}),p=i(c,[["__scopeId","data-v-042b0f7c"]]);export{p as default};

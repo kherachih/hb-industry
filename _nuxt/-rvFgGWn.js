@@ -1,0 +1,1 @@
+const n=r=>{var e;return(e=r==null?void 0:r.content)!=null&&e.length?r.content.some(t=>t?!!(t.type==="blok"||t.type==="image"||t.type==="horizontal_rule"||Array.isArray(t.content)&&t.content.length>0):!1):!1};export{n as h};

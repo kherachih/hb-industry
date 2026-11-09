@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>HB Industry Group - Douches de Sécurité & Lave-Yeux</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1200px;
+    height: 1200px;
+    overflow: hidden;
+    background: #0d1520;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flyer-canvas {
+    position: relative;
+    width: 1200px;
+    height: 1200px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  
+  /* 3D Product Background */
+  .product-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1200px;
+    height: 1100px;
+    object-fit: cover;
+    object-position: right 45% center;
+    z-index: 1;
+  }
+
+  /* Left soft gradient overlay for readability */
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 1100px;
+    background: linear-gradient(90deg, 
+      rgba(255,255,255,0.98) 0%, 
+      rgba(255,255,255,0.95) 45%, 
+      rgba(255,255,255,0.75) 75%, 
+      rgba(255,255,255,0.0) 100%);
+    z-index: 2;
+  }
+
+  /* Header */
+  .header-container {
+    position: absolute;
+    top: 36px;
+    left: 50px;
+    z-index: 10;
+    max-width: 580px;
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+  }
+  .brand-text {
+    border-left: 2px solid #cbd5e1;
+    padding-left: 14px;
+  }
+  .brand-company {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #0a6aa5;
+    text-transform: uppercase;
+  }
+  .brand-sub {
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .slogan-hook {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+  .slogan-hook span {
+    color: #e05638;
+  }
+  .product-main-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #0a6aa5;
+    letter-spacing: -0.3px;
+    margin-bottom: 28px;
+  }
+
+  /* Feature Bullet Points */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 480px;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .feature-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316 0%, #e05638 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(224, 86, 56, 0.35);
+  }
+  .feature-icon-box svg {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+  }
+  .feature-text {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.35;
+  }
+
+  /* Color variant badges (Top Right) */
+  .variant-container {
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .variant-header {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0a6aa5;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .variant-badge {
+    width: 140px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 92% 50%, 100% 100%, 0% 100%, 6% 50%);
+  }
+  .badge-green { background: linear-gradient(90deg, #16a34a, #22c55e); }
+  .badge-yellow { background: linear-gradient(90deg, #ca8a04, #eab308); color: #1e293b; }
+  .badge-red { background: linear-gradient(90deg, #b91c1c, #ef4444); }
+  .badge-inox { background: linear-gradient(90deg, #64748b, #94a3b8); }
+
+  /* Bottom Inset (Material focus) */
+  .material-inset {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #0f172a;
+    padding: 10px 20px 10px 12px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .inset-circle-check {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inset-circle-check svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+  .inset-text {
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  .inset-text span {
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+  }
+
+  /* Sector icons (Bottom Right) */
+  .sectors-bar {
+    position: absolute;
+    bottom: 118px;
+    right: 50px;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 10px 22px;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  .sector-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .sector-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    border: 1.5px solid #0a6aa5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sector-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #0a6aa5;
+  }
+  .sector-name {
+    font-size: 9.5px;
+    font-weight: 800;
+    color: #334155;
+    text-transform: uppercase;
+  }
+
+  /* Footer bar */
+  .footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1200px;
+    height: 94px;
+    background: #091a2c;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+  }
+  .footer-contacts {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .contact-icon-bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e05638;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-icon-bg svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+  .contact-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+  .contact-val {
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+  /* Orange Angled Brand Box */
+  .footer-brand-box {
+    height: 94px;
+    background: linear-gradient(135deg, #f97316 0%, #e05638 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    padding: 0 45px 0 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .brand-box-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+  .brand-box-motto {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #fef08a;
+    letter-spacing: 0.4px;
+  }
+</style>
+</head>
+<body>
+<div class="flyer-canvas">
+  <!-- 3D Render Background -->
+  <img class="product-bg" src="../assets/generated_products/douches_securite_lineup.jpg" alt="Douches de sécurité">
+
+  <!-- Left soft gradient -->
+  <div class="gradient-overlay"></div>
+
+  <!-- Header -->
+  <div class="header-container">
+    <div class="brand-row">
+      <img class="logo-img" src="../assets/logo/hbig_logo_clean.png" alt="HB Industry Group">
+      <div class="brand-text">
+        <div class="brand-company">HB INDUSTRY GROUP</div>
+        <div class="brand-sub">Mobilier & Équipements de Laboratoire</div>
+      </div>
+    </div>
+    <div class="slogan-hook">Votre sécurité <span>notre priorité</span></div>
+    <div class="product-main-title">Douches de sécurité et lave-yeux</div>
+
+    <!-- 5 Bullet Features -->
+    <div class="features-list">
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <div class="feature-text">Répond aux normes de sécurité EN 15154-1 & 2</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        </div>
+        <div class="feature-text">Construction robuste & acier traité anti-corrosion</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
+        </div>
+        <div class="feature-text">Activation rapide par tringle manuelle & pédale au pied</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-5-7L2 6v2h19V3l-10-5z"/></svg>
+        </div>
+        <div class="feature-text">Idéal pour les laboratoires, industries et sites sensibles</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <div class="feature-text">Installation simple, rapide et maintenance certifiée</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Variant badges (Top Right) -->
+  <div class="variant-container">
+    <div class="variant-header">Disponible en plusieurs couleurs</div>
+    <div class="variant-badge badge-green">VERT</div>
+    <div class="variant-badge badge-yellow">JAUNE</div>
+    <div class="variant-badge badge-red">ROUGE</div>
+    <div class="variant-badge badge-inox">INOX 304L</div>
+  </div>
+
+  <!-- Inset Focus (Bottom Left) -->
+  <div class="material-inset">
+    <div class="inset-circle-check">
+      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    </div>
+    <div class="inset-text">
+      Également disponible
+      <span>100% EN INOX 304/316L</span>
+    </div>
+  </div>
+
+  <!-- Sectors Bar (Bottom Right) -->
+  <div class="sectors-bar">
+    <div class="sector-pill">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-5v2H8V3H6v2H5c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3h-2z"/></svg></div>
+      <div class="sector-name">Laboratoires</div>
+    </div>
+    <div class="sector-pill">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm1 15h-2v-4h2v4zm0-6h-2v-2h2v2z"/></svg></div>
+      <div class="sector-name">Industrie</div>
+    </div>
+    <div class="sector-pill">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M6 3h12v2H6V3zm11 6V7H7v2c0 2.76 2.24 5 5 5s5-2.24 5-5zm-5 7c-3.87 0-7 3.13-7 7h14c0-3.87-3.13-7-7-7z"/></svg></div>
+      <div class="sector-name">Pharmacie</div>
+    </div>
+    <div class="sector-pill">
+      <div class="sector-icon"><svg viewBox="0 0 24 24"><path d="M19.8 18.4L14 10.7V5h1V3H9v2h1v5.7L4.2 18.4c-.6.8-.7 1.8-.3 2.7.4.9 1.2 1.4 2.2 1.4h11.8c1 0 1.8-.5 2.2-1.4.4-.9.3-1.9-.3-2.7z"/></svg></div>
+      <div class="sector-name">Chimie</div>
+    </div>
+  </div>
+
+  <!-- Footer bar -->
+  <div class="footer-bar">
+    <div class="footer-contacts">
+      <div class="contact-item">
+        <div class="contact-icon-bg">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Lignes Directes / WhatsApp</div>
+          <div class="contact-val">0775 55 87 28 / 0550 02 58 47</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon-bg">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Email Professionnel</div>
+          <div class="contact-val">hbig.dz@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right angled logo block -->
+    <div class="footer-brand-box">
+      <div class="brand-box-name">HB INDUSTRY GROUP</div>
+      <div class="brand-box-motto">Qualité · Sécurité · Performance</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

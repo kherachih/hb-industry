@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBIG – HB Industry Group | Site en cours d'assemblage</title>
+    <meta name="description" content="EURL HB Industry Group (HBIG) - Étude, conception et fabrication de mobilier de laboratoire et rayonnage industriel. Site officiel en cours d'assemblage.">
+
+    <!-- Typographies imposées : Barlow Condensed & IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           VARIABLES & PALETTE STRICTE (HBIG TECHNIQUE)
+           ========================================================================== */
+        :root {
+            --bg-cad: #F7F9FC;
+            --blue-primary: #0B6BAE;
+            --blue-night: #0A2540;
+            --orange-safety: #FF6A00;
+            --grid-line: rgba(11, 107, 174, 0.08);
+            --grid-major: rgba(11, 107, 174, 0.16);
+
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+
+            --border-heavy: 2px solid var(--blue-night);
+            --border-thick: 3px solid var(--blue-night);
+            --border-subtle: 1px solid rgba(10, 37, 64, 0.25);
+        }
+
+        /* Reset strict sans courbes */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border-radius: 0 !important; /* AUCUNE COURBE DÉCORATIVE */
+        }
+
+        html, body {
+            min-height: 100vh;
+            background-color: var(--bg-cad);
+            color: var(--blue-night);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ==========================================================================
+           PAPIER TECHNIQUE : GRILLE MILLIMÉTRÉE PURE CSS
+           ========================================================================== */
+        .technical-grid-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to right, var(--grid-major) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-major) 1px, transparent 1px);
+            background-size: 
+                20px 20px,
+                20px 20px,
+                100px 100px,
+                100px 100px;
+        }
+
+        /* Filigrane géant "HBIG" pochoir industriel en fond */
+        .blueprint-watermark {
+            position: fixed;
+            bottom: -3vw;
+            right: -2vw;
+            font-family: var(--font-display);
+            font-size: clamp(12rem, 30vw, 32rem);
+            font-weight: 900;
+            line-height: 0.8;
+            color: transparent;
+            -webkit-text-stroke: 1.5px rgba(11, 107, 174, 0.07);
+            user-select: none;
+            pointer-events: none;
+            z-index: 0;
+            letter-spacing: -0.05em;
+        }
+
+        /* ==========================================================================
+           CADRE DE PLAN D'INGÉNIEUR & CROIX DE REPÉRAGE (+)
+           ========================================================================== */
+        .blueprint-frame {
+            position: relative;
+            z-index: 1;
+            margin: 14px;
+            padding: 20px;
+            border: var(--border-thick);
+            min-height: calc(100vh - 28px);
+            display: flex;
+            flex-direction: column;
+            background: rgba(247, 249, 252, 0.94);
+        }
+
+        /* Repères de coupe (+) aux 4 coins */
+        .corner-mark {
+            position: absolute;
+            font-family: var(--font-mono);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--blue-primary);
+            user-select: none;
+            pointer-events: none;
+            line-height: 1;
+        }
+        .corner-tl { top: 6px; left: 8px; }
+        .corner-tr { top: 6px; right: 8px; }
+        .corner-bl { bottom: 6px; left: 8px; }
+        .corner-br { bottom: 6px; right: 8px; }
+
+        /* ==========================================================================
+           EN-TÊTE TECHNIQUE (LOGO & SPÉCIFICATIONS)
+           ========================================================================== */
+        .cad-header {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-bottom: var(--border-heavy);
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+
+        .header-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand-logo-frame {
+            border: 2px solid var(--blue-night);
+            background: #FFFFFF;
+            padding: 4px 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-text-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            color: var(--blue-night);
+            line-height: 1;
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--blue-primary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Indexation cartographique de l'en-tête */
+        .meta-strip {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--blue-night);
+            border-top: 1px dashed var(--grid-major);
+            padding-top: 10px;
+        }
+
+        .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-tag {
+            color: var(--blue-primary);
+            font-weight: 600;
+        }
+
+        .status-assembly-tag {
+            background: var(--blue-night);
+            color: #FFFFFF;
+            padding: 2px 8px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot-orange {
+            width: 7px;
+            height: 7px;
+            background-color: var(--orange-safety);
+            display: inline-block;
+        }
+
+        /* ==========================================================================
+           LIGNE DE COTATION TECHNIQUE (DIMENSION LINE AVEC FLÈCHES)
+           ========================================================================== */
+        .dimension-line-wrapper {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: var(--blue-primary);
+            user-select: none;
+        }
+
+        .dimension-line {
+            flex: 1;
+            height: 1px;
+            background: var(--blue-primary);
+            position: relative;
+        }
+
+        .dimension-line::before,
+        .dimension-line::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            width: 1px;
+            height: 9px;
+            background: var(--blue-primary);
+        }
+
+        .dimension-line::before { left: 0; }
+        .dimension-line::after { right: 0; }
+
+        .dimension-text {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+        }
+
+        /* ==========================================================================
+           CONTENU PRINCIPAL : COMPOSITION ASYMÉTRIQUE À GAUCHE
+           ========================================================================== */
+        .cad-main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .hero-statement-block {
+            max-width: 980px;
+        }
+
+        .technical-kicker {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--blue-primary);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* Titre géant sur 3 lignes : découpe et contour */
+        .hero-assembly-title {
+            font-family: var(--font-display);
+            font-size: clamp(3.8rem, 11vw, 8.8rem);
+            font-weight: 900;
+            line-height: 0.88;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: var(--blue-night);
+            margin-bottom: 28px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            animation: clipReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .hero-assembly-title .line-solid {
+            display: block;
+            color: var(--blue-night);
+        }
+
+        .hero-assembly-title .line-outline {
+            display: block;
+            color: transparent;
+            -webkit-text-stroke: clamp(2px, 0.35vw, 4px) var(--blue-primary);
+            letter-spacing: 0.01em;
+        }
+
+        @keyframes clipReveal {
+            0% {
+                clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+                opacity: 0;
+            }
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                opacity: 1;
+            }
+        }
+
+        /* Texte technique professionnel en français */
+        .technical-description {
+            font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+            max-width: 680px;
+            color: var(--blue-night);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            border-left: 3px solid var(--blue-primary);
+            padding-left: 18px;
+        }
+
+        /* ==========================================================================
+           1. BARRE DE PROGRESSION SEGMENTÉE (10 SEGMENTS TYPE CHAÎNE D'USINE)
+           ========================================================================== */
+        .assembly-progress-panel {
+            border: var(--border-heavy);
+            padding: 20px;
+            background: #FFFFFF;
+            margin-bottom: 36px;
+            max-width: 720px;
+        }
+
+        .progress-meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .progress-label-main {
+            color: var(--blue-night);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .progress-value-accent {
+            color: var(--orange-safety);
+            font-weight: 700;
+        }
+
+        /* 10 blocs rectangulaires */
+        .segment-chain {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 6px;
+            width: 100%;
+        }
+
+        .segment-slot {
+            height: 28px;
+            border: 2px solid var(--blue-night);
+            background: transparent;
+            position: relative;
+            transition: background-color 0.25s ease;
+        }
+
+        .segment-slot.filled {
+            background-color: var(--orange-safety);
+        }
+
+        .segment-indices {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 6px;
+            margin-top: 6px;
+            font-size: 0.65rem;
+            color: var(--blue-primary);
+            text-align: center;
+        }
+
+        /* ==========================================================================
+           2. COMPTE À REBOURS TECHNIQUE (CHÂSSIS BORDURE ÉPAISSE)
+           ========================================================================== */
+        .countdown-master-box {
+            margin-bottom: 36px;
+            max-width: 720px;
+        }
+
+        .countdown-panel-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--blue-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .countdown-grid-boxes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .countdown-cad-card {
+            border: var(--border-heavy);
+            background: #FFFFFF;
+            padding: 16px 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .countdown-number {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5vw, 4.4rem);
+            font-weight: 900;
+            line-height: 0.95;
+            color: var(--blue-night);
+            letter-spacing: -0.02em;
+        }
+
+        .countdown-unit {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--blue-primary);
+            margin-top: 6px;
+        }
+
+        /* ==========================================================================
+           3. FORMULAIRE D'ALERTE TECHNIQUE
+           ========================================================================== */
+        .notification-zone {
+            max-width: 720px;
+            margin-bottom: 40px;
+        }
+
+        .notification-title {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--blue-primary);
+            margin-bottom: 10px;
+        }
+
+        .industrial-form-strip {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border: var(--border-heavy);
+            background: #FFFFFF;
+        }
+
+        .cad-input-field {
+            flex: 1;
+            padding: 16px 20px;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            color: var(--blue-night);
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .cad-input-field::placeholder {
+            color: rgba(10, 37, 64, 0.45);
+        }
+
+        .cad-btn-submit {
+            background-color: var(--blue-primary);
+            color: #FFFFFF;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 16px 28px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .cad-btn-submit:hover {
+            background-color: var(--blue-night);
+        }
+
+        .form-status-feedback {
+            margin-top: 10px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--blue-night);
+            min-height: 20px;
+        }
+
+        .form-status-feedback.success {
+            color: var(--blue-primary);
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           4. LE CARTOUCHE TECHNIQUE D'USINE (TITLE BLOCK EN BAS À DROITE)
+           ========================================================================== */
+        .footer-layout-row {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            align-items: end;
+        }
+
+        .plant-contacts-col {
+            font-size: 0.82rem;
+            color: var(--blue-night);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .plant-contacts-col a {
+            color: var(--blue-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .plant-contacts-col a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links-strip {
+            display: flex;
+            gap: 16px;
+            margin-top: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Le Cartouche façon plan AutoCAD / Dessin d'ingénierie */
+        .engineering-cartouche {
+            border: var(--border-thick);
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 480px;
+            margin-left: auto;
+        }
+
+        .cartouche-header {
+            background: var(--blue-night);
+            color: #FFFFFF;
+            padding: 8px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cartouche-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        }
+
+        .cartouche-table td {
+            border: 1px solid var(--blue-night);
+            padding: 8px 12px;
+            vertical-align: top;
+        }
+
+        .cartouche-cell-label {
+            font-size: 0.62rem;
+            color: var(--blue-primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .cartouche-cell-value {
+            font-weight: 600;
+            color: var(--blue-night);
+        }
+
+        /* ==========================================================================
+           CURSEUR RETICULE DE REPÉRAGE (+ DÉPLACEMENT SOURIS DESKTOP)
+           ========================================================================== */
+        .crosshair-cursor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            width: 24px;
+            height: 24px;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .crosshair-cursor::before,
+        .crosshair-cursor::after {
+            content: '';
+            position: absolute;
+            background: var(--blue-primary);
+            opacity: 0.75;
+        }
+
+        .crosshair-cursor::before {
+            top: 11px;
+            left: 0;
+            width: 24px;
+            height: 2px;
+        }
+
+        .crosshair-cursor::after {
+            top: 0;
+            left: 11px;
+            width: 2px;
+            height: 24px;
+        }
+
+        .cursor-coords {
+            position: absolute;
+            top: 26px;
+            left: 14px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--blue-primary);
+            white-space: nowrap;
+            background: var(--bg-cad);
+            padding: 1px 4px;
+            border: 1px solid var(--grid-major);
+            opacity: 0.85;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .crosshair-cursor {
+                display: block;
+            }
+        }
+
+        /* ==========================================================================
+           RESPONSIVE MOBILE-FIRST ADAPTATIONS
+           ========================================================================== */
+        @media (min-width: 640px) {
+            .industrial-form-strip {
+                flex-direction: row;
+            }
+
+            .countdown-grid-boxes {
+                gap: 16px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .blueprint-frame {
+                margin: 24px;
+                padding: 36px 40px;
+            }
+
+            .cad-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .cad-header .meta-strip {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .footer-layout-row {
+                grid-template-columns: 1fr auto;
+                align-items: end;
+            }
+        }
+
+        /* Respect strict de prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            .hero-assembly-title {
+                clip-path: none;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fond de grille millimétrée technique -->
+    <div class="technical-grid-bg"></div>
+
+    <!-- Filigrane stencil géant en arrière-plan -->
+    <div class="blueprint-watermark">HBIG</div>
+
+    <!-- Curseur réticule de repérage technique (Desktop) -->
+    <div class="crosshair-cursor" id="crosshair">
+        <span class="cursor-coords" id="coordsReadout">X:000 Y:000</span>
+    </div>
+
+    <!-- Cadre extérieur de plan d'ingénieur -->
+    <div class="blueprint-frame">
+
+        <!-- Repères de coins (+) -->
+        <span class="corner-mark corner-tl">+</span>
+        <span class="corner-mark corner-tr">+</span>
+        <span class="corner-mark corner-bl">+</span>
+        <span class="corner-mark corner-br">+</span>
+
+        <!-- En-tête technique normé -->
+        <header class="cad-header">
+            <div class="header-top-row">
+                <div class="brand-block">
+                    <div class="brand-logo-frame">
+                        <!-- Logo fourni sans déformation -->
+                        <img 
+                            src="assets/logo/facebook_profile_logo.jpg" 
+                            alt="Logo HBIG" 
+                            class="brand-logo-img"
+                            onerror="this.src='images/hb-industry/logo/facebook_profile_logo.jpg'"
+                        >
+                    </div>
+                    <div class="brand-text-block">
+                        <span class="brand-name">HB INDUSTRY GROUP</span>
+                        <span class="brand-sub">INGÉNIERIE & MOBILIER TECHNIQUE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métadonnées de cartouche supérieur -->
+            <div class="meta-strip">
+                <div class="meta-item">
+                    <span class="meta-tag">DOC :</span>
+                    <span>PLAN-ASSEMBLAGE-WEB</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-tag">RÉF :</span>
+                    <span>DZ-05-BATNA</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-tag">REV :</span>
+                    <span>01.0</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-tag">ÉCHELLE :</span>
+                    <span>1:1</span>
+                </div>
+                <div class="status-assembly-tag">
+                    <span class="status-dot-orange"></span>
+                    <span>ASSEMBLAGE EN COURS</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Ligne de cotation technique d'ingénierie -->
+        <div class="dimension-line-wrapper">
+            <span class="dimension-text">◄ FEUILLE 01/01</span>
+            <div class="dimension-line"></div>
+            <span class="dimension-text">LARG. UTILE : 100% ►</span>
+        </div>
+
+        <!-- Corps principal du plan -->
+        <main class="cad-main">
+            <section class="hero-statement-block">
+                <span class="technical-kicker">FICHE TECHNIQUE // FABRICATION INDUSTRIELLE</span>
+
+                <!-- Titre géant sur 3 lignes avec alternance plein / contour découpé -->
+                <h1 class="hero-assembly-title">
+                    <span class="line-solid">EN COURS</span>
+                    <span class="line-outline">D'ASSEMBLAGE</span>
+                    <span class="line-solid">SITE INDUSTRIEL</span>
+                </h1>
+
+                <!-- Texte français sobre et professionnel -->
+                <p class="technical-description">
+                    Notre nouveau site industriel est en cours de fabrication. Étude, conception et réalisation sur mesure de mobilier scientifique, paillasses de laboratoire, armoires de sécurité et rayonnages techniques. Précision, fiabilité, performance : bientôt en ligne.
+                </p>
+
+                <!-- 1. Barre de progression segmentée (10 segments type chaîne d'usine) -->
+                <div class="assembly-progress-panel">
+                    <div class="progress-meta-row">
+                        <span class="progress-label-main">
+                            <span class="status-dot-orange"></span>
+                            CHAÎNE D'ASSEMBLAGE : ÉTAPE 07 / 10
+                        </span>
+                        <span class="progress-value-accent" id="progressPercentageLabel">AVANCEMENT : 70 %</span>
+                    </div>
+
+                    <div class="segment-chain" id="assemblyChain">
+                        <div class="segment-slot" data-index="1"></div>
+                        <div class="segment-slot" data-index="2"></div>
+                        <div class="segment-slot" data-index="3"></div>
+                        <div class="segment-slot" data-index="4"></div>
+                        <div class="segment-slot" data-index="5"></div>
+                        <div class="segment-slot" data-index="6"></div>
+                        <div class="segment-slot" data-index="7"></div>
+                        <div class="segment-slot" data-index="8"></div>
+                        <div class="segment-slot" data-index="9"></div>
+                        <div class="segment-slot" data-index="10"></div>
+                    </div>
+
+                    <div class="segment-indices">
+                        <span>10%</span>
+                        <span>20%</span>
+                        <span>30%</span>
+                        <span>40%</span>
+                        <span>50%</span>
+                        <span>60%</span>
+                        <span>70%</span>
+                        <span>80%</span>
+                        <span>90%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+
+                <!-- 2. Compte à rebours calibré dans cadres à bordures épaisses -->
+                <div class="countdown-master-box">
+                    <div class="countdown-panel-label">
+                        <span>[TEMPORISATION // ESTIMATION OUVERTURE DES ACCÈS]</span>
+                    </div>
+                    <div class="countdown-grid-boxes">
+                        <div class="countdown-cad-card">
+                            <span class="countdown-number" id="timerDays">--</span>
+                            <span class="countdown-unit">JOURS</span>
+                        </div>
+                        <div class="countdown-cad-card">
+                            <span class="countdown-number" id="timerHours">--</span>
+                            <span class="countdown-unit">HEURES</span>
+                        </div>
+                        <div class="countdown-cad-card">
+                            <span class="countdown-number" id="timerMinutes">--</span>
+                            <span class="countdown-unit">MINUTES</span>
+                        </div>
+                        <div class="countdown-cad-card">
+                            <span class="countdown-number" id="timerSeconds">--</span>
+                            <span class="countdown-unit">SECONDES</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Formulaire rectangulaire d'alerte de lancement -->
+                <div class="notification-zone">
+                    <div class="notification-title">[REGISTRE DE NOTIFICATION DU DÉPLOIEMENT]</div>
+                    <form class="industrial-form-strip" id="notifyCadForm" onsubmit="handleNotificationSubmit(event)">
+                        <input 
+                            type="email" 
+                            class="cad-input-field" 
+                            id="subscriberEmail" 
+                            placeholder="VOTRE ADRESSE E-MAIL PROFESSIONNELLE..." 
+                            required
+                        >
+                        <button type="submit" class="cad-btn-submit">
+                            ÊTRE NOTIFIÉ DU LANCEMENT
+                        </button>
+                    </form>
+                    <div class="form-status-feedback" id="feedbackMessage"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 4. Pied de page & Cartouche normé d'ingénierie -->
+        <footer class="footer-layout-row">
+            <div class="plant-contacts-col">
+                <div><strong>UNITÉ INDUSTRIELLE & FABRICATION :</strong> Cité Lehnancha, N'Gaous, Wilaya de Batna, Algérie</div>
+                <div><strong>LIAISON DIRECTE ATELIER :</strong> <a href="tel:+213775558728">0775 55 87 28</a> / <a href="tel:+213550025847">0550 02 58 47</a></div>
+                <div><strong>BUREAU D'ÉTUDES :</strong> <a href="mailto:hbig.dz@gmail.com">hbig.dz@gmail.com</a></div>
+                <div class="social-links-strip">
+                    <span>CANAUX OFFICIELS :</span>
+                    <a href="https://www.facebook.com/hbig.dz" target="_blank" rel="noopener">[FACEBOOK]</a>
+                    <a href="https://www.ouedkniss.com/store/24762/hb-industry-group" target="_blank" rel="noopener">[OUEDKNISS STORE]</a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener">[LINKEDIN]</a>
+                </div>
+            </div>
+
+            <!-- Cartouche de dessin technique -->
+            <div class="engineering-cartouche">
+                <div class="cartouche-header">
+                    <span>CARTOUCHE DE CONTRÔLE</span>
+                    <span>REF: HBIG-2026-A1</span>
+                </div>
+                <table class="cartouche-table">
+                    <tr>
+                        <td style="width: 60%;">
+                            <span class="cartouche-cell-label">ENTREPRISE</span>
+                            <span class="cartouche-cell-value">EURL HB INDUSTRY GROUP (HBIG)</span>
+                        </td>
+                        <td style="width: 40%;">
+                            <span class="cartouche-cell-label">DATE</span>
+                            <span class="cartouche-cell-value">NOVEMBRE 2026</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="cartouche-cell-label">ACTIVITÉ PRINCIPALE</span>
+                            <span class="cartouche-cell-value">Mobilier scientifique & rayonnage</span>
+                        </td>
+                        <td>
+                            <span class="cartouche-cell-label">STATUT</span>
+                            <span class="cartouche-cell-value" style="color: var(--orange-safety);">EN DÉVELOPPEMENT</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="cartouche-cell-label">BUREAU TECHNIQUE & CHIFFRAGE</span>
+                            <span class="cartouche-cell-value">Batna, Algérie &bull; hbig.dz@gmail.com</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ==========================================================================
+       SCRIPTS INTÉGRÉS : COMPTE À REBOURS, PROGRESSION & CURSEUR RETICULE
+       ========================================================================== -->
+    <script>
+        /* ==========================================================================
+           VARIABLES DE CONFIGURATION FACILEMENT MODIFIABLES
+           ========================================================================== */
+        // Pourcentage d'avancement (par défaut 70% = 7 segments sur 10)
+        const ASSEMBLY_PROGRESS_PERCENT = 70;
+
+        // Date cible du compte à rebours : modifiez le nombre de jours ou définissez une date fixe
+        const DAYS_UNTIL_LAUNCH = 30; // ex: 30 jours
+        const TARGET_LAUNCH_DATE = new Date(Date.now() + (DAYS_UNTIL_LAUNCH * 24 * 60 * 60 * 1000));
+        // Alternative date fixe ISO : const TARGET_LAUNCH_DATE = new Date("2026-12-05T09:00:00");
+
+        /* ==========================================================================
+           1. ANIMATION SÉQUENTIELLE DE LA CHAÎNE DE PRODUCTION (SEGMENTS)
+           ========================================================================== */
+        document.addEventListener('DOMContentLoaded', () => {
+            const slots = document.querySelectorAll('.segment-slot');
+            const totalSegments = slots.length;
+            const filledCount = Math.round((ASSEMBLY_PROGRESS_PERCENT / 100) * totalSegments);
+
+            // Remplissage progressif un par un
+            slots.forEach((slot, index) => {
+                if (index < filledCount) {
+                    setTimeout(() => {
+                        slot.classList.add('filled');
+                    }, 120 * (index + 1));
+                }
+            });
+        });
+
+        /* ==========================================================================
+           2. CALCUL ET RAFRAÎCHISSEMENT DU COMPTE À REBOURS
+           ========================================================================== */
+        const elDays = document.getElementById('timerDays');
+        const elHours = document.getElementById('timerHours');
+        const elMinutes = document.getElementById('timerMinutes');
+        const elSeconds = document.getElementById('timerSeconds');
+
+        function refreshCountdown() {
+            const now = new Date().getTime();
+            const delta = TARGET_LAUNCH_DATE.getTime() - now;
+
+            if (delta <= 0) {
+                elDays.textContent = '00';
+                elHours.textContent = '00';
+                elMinutes.textContent = '00';
+                elSeconds.textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(delta / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((delta % (1000 * 60)) / 1000);
+
+            elDays.textContent = days < 10 ? '0' + days : days;
+            elHours.textContent = hours < 10 ? '0' + hours : hours;
+            elMinutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+            elSeconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        }
+
+        setInterval(refreshCountdown, 1000);
+        refreshCountdown();
+
+        /* ==========================================================================
+           3. FORMULAIRE DE NOTIFICATION CÔTÉ CLIENT
+           ========================================================================== */
+        function handleNotificationSubmit(event) {
+            event.preventDefault();
+            const input = document.getElementById('subscriberEmail');
+            const feedback = document.getElementById('feedbackMessage');
+            const email = input.value.trim();
+
+            if (email && email.includes('@') && email.includes('.')) {
+                feedback.className = 'form-status-feedback success';
+                feedback.textContent = `[CONFIRMATION : ${email} ENREGISTRÉ DANS LE REGISTRE D'OUVERTURE HBIG]`;
+                input.value = '';
+            } else {
+                feedback.className = 'form-status-feedback';
+                feedback.textContent = '[ERREUR : VEUILLEZ SAISIR UNE ADRESSE E-MAIL VALIDE]';
+            }
+        }
+
+        /* ==========================================================================
+           4. CURSEUR RÉTICULE DE REPÉRAGE D'USINE AVEC COORDONNÉES EN TEMPS RÉEL
+           ========================================================================== */
+        const crosshair = document.getElementById('crosshair');
+        const coordsReadout = document.getElementById('coordsReadout');
+
+        if (window.matchMedia('(pointer: fine)').matches) {
+            window.addEventListener('mousemove', (e) => {
+                crosshair.style.left = e.clientX + 'px';
+                crosshair.style.top = e.clientY + 'px';
+                coordsReadout.textContent = `X:${e.clientX} Y:${e.clientY}`;
+            });
+        }
+    </script>
+</body>
+</html>
