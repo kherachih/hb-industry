@@ -1,0 +1,542 @@
+[
+  {
+    "id": "paillasse-centrale-double-face-evier",
+    "slug": "paillasse-centrale-double-face-evier",
+    "category": "paillasse",
+    "category_label": "Paillasses & Postes de Travail",
+    "name": "Paillasse Centrale Double Face avec Évier & Dosseret HBIG",
+    "short_desc": "Îlot central modulaire grande capacité avec plan Trespa TopLab®, dosseret technique, robinetterie col de cygne et cuve polypropylène intégrée.",
+    "badge": "Norme NF EN 13150",
+    "image": "/assets/products_transparent/paillasse_centrale_double_face_evier.png",
+    "orig_image": "/assets/products/paillasse_centrale_double_face_evier_orig.png",
+    "specs": {
+      "Norme européenne": "NF EN 13150 & NF EN 13792 (Laboratoires)",
+      "Structure portante": "Châssis mécano-soudé acier 60×40×2 mm haute rigidité",
+      "Traitement de surface": "Poudre époxy polyester cuite au four à 220°C (80-100 µm)",
+      "Plan de travail": "Résine phénolique Trespa TopLab® Plus 20 mm (antibactérien, anti-acides)",
+      "Zone lavage": "Cuve monobloc polypropylène 300×300×200 mm + bonde siphoïde",
+      "Robinetterie": "Col de cygne laboratoire laiton massif revêtu Rilsan® résistant aux corrosifs",
+      "Alimentation": "Goulotte centrale alu anodisé, prises différentielles 16A/220V étanches IP55",
+      "Dimensions standards": "L 2400 / 3000 mm × P 1500 mm × H 900 mm (sur-mesure disponible)",
+      "Capacité de charge": "500 kg répartis par module",
+      "Garantie usine": "10 ans structure métallique Batna / SAV 58 Wilayas"
+    },
+    "applications": [
+      "Laboratoires d'analyses médicales et pharmaceutiques",
+      "Centres de recherche universitaire & R&D industrielle",
+      "Contrôle qualité agroalimentaire et pétrochimique",
+      "Instituts de biotechnologie et microbiologie"
+    ],
+    "tags": [
+      "Trespa TopLab® 20mm",
+      "Cuve Polypropylène",
+      "Goulotte Électrique IP55",
+      "Garantie 10 Ans"
+    ],
+    "gallery": [
+      "/assets/products_transparent/paillasse_centrale_double_face_evier.png",
+      "/assets/products/paillasse_centrale_double_face_evier_orig.png"
+    ]
+  },
+  {
+    "id": "paillasse-murale-etabli-laboratoire-evier",
+    "slug": "paillasse-murale-etabli-laboratoire-evier",
+    "category": "paillasse",
+    "category_label": "Paillasses & Postes de Travail",
+    "name": "Établi Paillasse Murale avec Évier & Caissons Suspendus HBIG",
+    "short_desc": "Poste de travail ergonomique en linéaire mural avec plan anti-acide Trespa, dosseret avec robinetterie chimique et rangements modulaires.",
+    "badge": "Robuste & Époxy 220°C",
+    "image": "/assets/products_transparent/paillasse_murale_etabli_laboratoire_evier.png",
+    "orig_image": "/assets/products/paillasse_murale_etabli_laboratoire_evier_orig.png",
+    "specs": {
+      "Norme de fabrication": "NF EN 13150 (Résistance mécanique & stabilité)",
+      "Châssis": "Pieds en C (C-Frame) acier profilé 60×40×2 mm avec vérins de mise à niveau",
+      "Revêtement": "Thermolaquage époxy anti-corrosion cuit à 220°C",
+      "Revêtement de plan": "Résine phénolique pleine masse 20 mm avec rive anti-goutte",
+      "Poste évier": "Évier polypropylène haute densité résistant aux solvants et acides concentrés",
+      "Caissons": "Caissons suspendus acier 10/10e avec tiroirs montés sur glissières à billes",
+      "Dimensions standards": "L 1500 / 1800 / 2400 mm × P 750 mm × H 900 mm",
+      "Garantie": "10 ans structure métallique"
+    },
+    "applications": [
+      "Postes de pesée et de préparation d'échantillons",
+      "Laboratoires de contrôle qualité et de métrologie",
+      "Salles de travaux pratiques scientifiques (Lycées / Universités)",
+      "Postes d'analyses cliniques hospitaliers"
+    ],
+    "tags": [
+      "Châssis C-Frame",
+      "Plan Anti-Acides",
+      "Caissons Suspendus",
+      "Époxy 220°C"
+    ],
+    "gallery": [
+      "/assets/products_transparent/paillasse_murale_etabli_laboratoire_evier.png",
+      "/assets/products/paillasse_murale_etabli_laboratoire_evier_orig.png"
+    ]
+  },
+  {
+    "id": "hotte-sorbonne-laboratoire-chimique",
+    "slug": "hotte-sorbonne-laboratoire-chimique",
+    "category": "hottes",
+    "category_label": "Hottes & Sorbonnes d'Extraction",
+    "name": "Hotte Sorbonne d'Aspiration Chimique HBIG (Finition Bleue)",
+    "short_desc": "Enceinte de confinement sécurisée pour manipulation de solvants, acides et composés volatils, avec façade guillotine vitrée équilibrée.",
+    "badge": "Norme NF EN 14175",
+    "image": "/assets/products_transparent/hotte_sorbonne_laboratoire_chimique.png",
+    "orig_image": "/assets/products/hotte_sorbonne_laboratoire_chimique_orig.png",
+    "specs": {
+      "Conformité sécurité": "NF EN 14175-2 / NF EN 14175-3 (Aéraulique & Confinement)",
+      "Vitesse frontale d'air": "0,4 à 0,6 m/s régulée automatiquement avec alarme de flux sonore/visuelle",
+      "Façade vitrée": "Guillotine en verre feuilleté sécurit 6 mm avec contrepoids de sécurité",
+      "Plan de manipulation": "Cuvette monolithique en grès étiré ou polypropylène avec rebord de rétention",
+      "Extraction": "Plénum arrière d'aspiration avec raccord aéraulique DN200/250 anti-corrosion",
+      "Éclairage": "LED étanche IP65 hors flux gazeux (> 800 Lux sur plan)",
+      "Alimentations intégrées": "Robinetterie eau / gaz spéciale labo télécommandée en façade + 4 prises 220V",
+      "Dimensions extérieures": "L 1200 / 1500 / 1800 mm × P 850 mm × H 2350 mm"
+    },
+    "applications": [
+      "Manipulations chimiques exothermiques et fumigènes",
+      "Synthèse organique et minérale en laboratoire R&D",
+      "Minéralisation d'échantillons par acides forts",
+      "Laboratoires universitaires et pharmaceutiques"
+    ],
+    "tags": [
+      "NF EN 14175",
+      "Guillotine Sécurit",
+      "Aspiration Vapeurs",
+      "Éclairage LED IP65"
+    ],
+    "gallery": [
+      "/assets/products_transparent/hotte_sorbonne_laboratoire_chimique.png",
+      "/assets/products/hotte_sorbonne_laboratoire_chimique_orig.png"
+    ]
+  },
+  {
+    "id": "armoire-stockage-chimique-bleue",
+    "slug": "armoire-stockage-chimique-bleue",
+    "category": "securite",
+    "category_label": "Armoires de Sécurité & Confinement",
+    "name": "Armoire Sécurisée de Stockage Chimique HBIG (Finition Bleue)",
+    "short_desc": "Armoire de confinement en acier électrozingué 12/10e avec étagères de rétention ajustables, bac étanche et ventilation passive/active.",
+    "badge": "Conforme ISO 3864",
+    "image": "/assets/products_transparent/armoire_stockage_chimique_bleue.png",
+    "orig_image": "/assets/products/armoire_stockage_chimique_bleue_orig.png",
+    "specs": {
+      "Norme": "ISO 3864 & Recommandations INRS pour stockage produits chimiques",
+      "Structure": "Tôle acier 12/10e électrozinguée double paroi avec renforts anti-déformation",
+      "Peinture": "Poudre époxy bleue haute résistance aux ambiances acides et corrosives (cuite à 220°C)",
+      "Fermeture": "Portes battantes verrouillables à clé avec crémone 3 points de sécurité",
+      "Étagères de rétention": "4 étagères réglables en hauteur (bords relevés 50 mm, capacité 80 kg/étagère)",
+      "Bac de rétention bas": "Bac étanche amovible en fond d'armoire (contenance 36 à 50 Litres)",
+      "Orifice de ventilation": "Ouïes d'aération avec grille pare-flammes et buse DN100 pour raccord extraction",
+      "Dimensions": "L 1000 mm × P 500 mm × H 1950 mm"
+    },
+    "applications": [
+      "Stockage sécurisé de réactifs en laboratoire",
+      "Rangement des produits toxiques, nocifs et polluants",
+      "Ateliers de galvanoplastie et chimie industrielle",
+      "Pharmacies d'hôpitaux et centres de soins"
+    ],
+    "tags": [
+      "Acier 12/10e",
+      "4 Étagères Rétention",
+      "Bac Étanche 50L",
+      "Serrure 3 Points"
+    ],
+    "gallery": [
+      "/assets/products_transparent/armoire_stockage_chimique_bleue.png",
+      "/assets/products/armoire_stockage_chimique_bleue_orig.png"
+    ]
+  },
+  {
+    "id": "armoire-securite-combinee-acides-bases",
+    "slug": "armoire-securite-combinee-acides-bases",
+    "category": "securite",
+    "category_label": "Armoires de Sécurité & Confinement",
+    "name": "Armoire de Sécurité Combinée Acides & Bases HBIG",
+    "short_desc": "Confinement bi-compartimenté totalement isolé pour le stockage simultané et séparé des produits chimiques incompatibles.",
+    "badge": "Bi-compartiment Isolé",
+    "image": "/assets/products_transparent/armoire_securite_combinee_acides_bases.png",
+    "orig_image": "/assets/products/armoire_securite_combinee_acides_bases_orig.png",
+    "specs": {
+      "Conception": "Séparation centrale étanche évitant toute réaction dangereuse entre vapeurs d'acides et de bases",
+      "Compartiment Acides": "Étagères et bac de rétention équipés de sur-bacs en polypropylène haute résistance",
+      "Compartiment Bases": "Étagères acier époxy renforcé avec cuvettes de rétention anticorrosives",
+      "Fermeture": "Double serrure à clé indépendante pour chaque compartiment",
+      "Ventilation": "Double raccordement d'extraction supérieur Ø100 mm pour renouvellement d'air constant",
+      "Signalétique": "Pictogrammes de danger normalisés ISO 7010 intégrés en façade",
+      "Dimensions": "L 1200 mm × P 550 mm × H 1950 mm",
+      "Fabrication": "Ateliers HBIG Batna"
+    },
+    "applications": [
+      "Laboratoires polyvalents manipulant acides forts et bases minérales",
+      "Stations d'épuration et unités de traitement des eaux",
+      "Centres de recherche en chimie minérale et analytique",
+      "Laboratoires scolaires et universitaires"
+    ],
+    "tags": [
+      "Bi-Compartiment Isolé",
+      "Bacs Polypropylène",
+      "Extraction DN100",
+      "ISO 3864"
+    ],
+    "gallery": [
+      "/assets/products_transparent/armoire_securite_combinee_acides_bases.png",
+      "/assets/products/armoire_securite_combinee_acides_bases_orig.png"
+    ]
+  },
+  {
+    "id": "douche-securite-combinee-jaune-securite",
+    "slug": "douche-securite-combinee-jaune-securite",
+    "category": "douches",
+    "category_label": "Douches de Sécurité & Rince-Yeux",
+    "name": "Douche de Sécurité & Rince-Yeux Combinée Jaune Sécurité HBIG",
+    "short_desc": "Équipement d'urgence combiné à haute visibilité conforme EN 15154. Pomme de douche déluge et vasque rince-yeux à double diffuseur aéré.",
+    "badge": "Norme NF EN 15154-1 & 2",
+    "image": "/assets/products_transparent/douche_securite_combinee_jaune_securite.png",
+    "orig_image": "/assets/products/douche_securite_combinee_jaune_securite_orig.png",
+    "specs": {
+      "Norme de conformité": "NF EN 15154-1 (Douches corporelles) & NF EN 15154-2 (Lave-yeux)",
+      "Finition": "Revêtement thermolaqué époxy jaune sécurité RAL 1016 haute visibilité sur tube acier galvanisé",
+      "Activation douche": "Tringle rigide avec poignée triangulaire ergonomique (ouverture instantanée en <1s)",
+      "Activation lave-yeux": "Palette manuelle 'PUSH' et/ou pédale au pied",
+      "Débit douche": "> 75 L/min sous 2,5 bars (jet conique d'inondation intégrale)",
+      "Débit lave-yeux": "12 à 14 L/min (jets aérés doux basse pression protégeant la cornée)",
+      "Cuvette & buses": "Vasque rince-yeux inox / ABS avec capuchons antipoussière basculants",
+      "Raccordement": "Arrivée eau 1\"1/4 (DN32) - Évacuation 1\"1/4"
+    },
+    "applications": [
+      "Ateliers de fabrication chimique et pétrochimique",
+      "Zones de dépotage de solvants et acides",
+      "Laboratoires d'enseignement et de recherche",
+      "Industries pharmaceutiques et cosmétiques"
+    ],
+    "tags": [
+      "NF EN 15154-1 & 2",
+      "Jaune Haute Visibilité",
+      "Débit >75 L/min",
+      "Double Diffuseur"
+    ],
+    "gallery": [
+      "/assets/products_transparent/douche_securite_combinee_jaune_securite.png",
+      "/assets/products/douche_securite_combinee_jaune_securite_orig.png"
+    ]
+  },
+  {
+    "id": "douche-securite-lave-yeux-inox",
+    "slug": "douche-securite-lave-yeux-inox",
+    "category": "douches",
+    "category_label": "Douches de Sécurité & Rince-Yeux",
+    "name": "Douche de Sécurité & Lave-Yeux Combinée Tout Inox 304/316L HBIG",
+    "short_desc": "Solution de premier secours intégrale en acier inoxydable poli pour environnements corrosifs, salles blanches et industrie agro-pharmaceutique.",
+    "badge": "Tout Inox 304/316L",
+    "image": "/assets/products_transparent/douche_securite_lave_yeux_inox.png",
+    "orig_image": "/assets/products/douche_securite_lave_yeux_inox_orig.png",
+    "specs": {
+      "Matériau": "100% Acier Inoxydable AISI 304 / 316L (haute résistance chimique et saline)",
+      "Norme": "NF EN 15154-1 & 2 / ANSI Z358.1",
+      "Pommeau de douche": "Pommeau diffuseur inox 260 mm grand angle",
+      "Vasque lave-yeux": "Cuvette inox brossé avec crépine d'évacuation intégrée",
+      "Vannes": "Vannes à boisseau sphérique inox 1/4 de tour à ouverture maintenue",
+      "Buses d'aspersion": "Buses inox avec mousseurs aérateurs et filtres tamis démontables",
+      "Fixation": "Platine de sol inox renforcée 4 points avec vis d'ancrage fournies",
+      "Pression de service": "2 à 5 bars recommandés"
+    },
+    "applications": [
+      "Salles propres et atmosphères contrôlées ISO",
+      "Laboratoires de recherche biologique et pharmaceutique",
+      "Zones côtières ou sites pétrochimiques offshore / raffinage",
+      "Industries agroalimentaires soumises à lavages fréquents"
+    ],
+    "tags": [
+      "Inox AISI 304/316L",
+      "Atmosphère Corrosive",
+      "Commande Mains Libres",
+      "Pommeau 260mm"
+    ],
+    "gallery": [
+      "/assets/products_transparent/douche_securite_lave_yeux_inox.png",
+      "/assets/products/douche_securite_lave_yeux_inox_orig.png"
+    ]
+  },
+  {
+    "id": "station-lave-yeux-colonne-industrielle",
+    "slug": "station-lave-yeux-colonne-industrielle",
+    "category": "douches",
+    "category_label": "Douches de Sécurité & Rince-Yeux",
+    "name": "Station Lave-Yeux sur Colonne Industrielle HBIG",
+    "short_desc": "Poste de lavage oculaire autoportant sur colonne pour implantation stratégique au plus près des postes de travail dangereux.",
+    "badge": "Fixation au Sol & Pédale",
+    "image": "/assets/products_transparent/station_lave_yeux_colonne_industrielle.png",
+    "orig_image": "/assets/products/station_lave_yeux_colonne_industrielle_orig.png",
+    "specs": {
+      "Norme": "NF EN 15154-2",
+      "Implantation": "Colonne autoportée fixation au sol par platine mécanique",
+      "Double commande": "Commande manuelle par palette large et commande au pied par pédale renforcée",
+      "Diffuseurs": "2 têtes de pulvérisation avec régulateur de débit automatique et caches basculants",
+      "Vasque": "Inox embouti diamètre 300 mm insensible aux corrosifs",
+      "Évacuation": "Siphon d'évacuation direct DN32 intégré dans la colonne",
+      "Hauteur opérationnelle": "1050 mm du sol (hauteur ergonomique normalisée)"
+    },
+    "applications": [
+      "Ateliers de charge batteries et locaux techniques",
+      "Lignes d'embouteillage chimique et laboratoires d'essais",
+      "Entrepôts de logistique de matières dangereuses",
+      "Centres de maintenance et usines métallurgiques"
+    ],
+    "tags": [
+      "Fixation au Sol",
+      "Double Commande Pédale",
+      "Vasque Inox 300mm",
+      "NF EN 15154-2"
+    ],
+    "gallery": [
+      "/assets/products_transparent/station_lave_yeux_colonne_industrielle.png",
+      "/assets/products/station_lave_yeux_colonne_industrielle_orig.png"
+    ]
+  },
+  {
+    "id": "station-lave-yeux-murale-inox",
+    "slug": "station-lave-yeux-murale-inox",
+    "category": "douches",
+    "category_label": "Douches de Sécurité & Rince-Yeux",
+    "name": "Station Lave-Yeux Murale Tout Inox HBIG",
+    "short_desc": "Unité de rinçage oculaire compacte pour montage mural direct, gain de place optimal et réactivité instantanée en paillasse.",
+    "badge": "Compact Mural Inox",
+    "image": "/assets/products_transparent/station_lave_yeux_murale_inox.png",
+    "orig_image": "/assets/products/station_lave_yeux_murale_inox_orig.png",
+    "specs": {
+      "Norme": "NF EN 15154-2",
+      "Fixation": "Support mural robuste inox avec 3 points d'ancrage et réglage d'aplomb",
+      "Matière": "Acier inox AISI 304 finition électropolie",
+      "Commande": "Drapeau poussoir 'PUSH' à actionnement ergonomique même les yeux fermés",
+      "Débit d'eau": "12 L/min régulé par pastille calibrée",
+      "Alimentation": "Raccordement femelle 1/2\" - Évacuation 1\"1/4",
+      "Maintenance": "Filtres extractibles et lavables sans outil spécial"
+    },
+    "applications": [
+      "Laboratoires d'hématologie, biochimie et virologie",
+      "Salles d'analyses environnementales",
+      "Postes de paillasse à proximité des cuves de lavage",
+      "Salles de travaux pratiques scientifiques"
+    ],
+    "tags": [
+      "Montage Mural Compact",
+      "Inox Électropoli",
+      "Drapeau PUSH Inox",
+      "Filtres Démontables"
+    ],
+    "gallery": [
+      "/assets/products_transparent/station_lave_yeux_murale_inox.png",
+      "/assets/products/station_lave_yeux_murale_inox_orig.png"
+    ]
+  },
+  {
+    "id": "station-rincage-oculaire-push-verte",
+    "slug": "station-rincage-oculaire-push-verte",
+    "category": "douches",
+    "category_label": "Douches de Sécurité & Rince-Yeux",
+    "name": "Station de Rinçage Oculaire Murale PUSH Haute Visibilité HBIG",
+    "short_desc": "Station d'urgence murale à repérage visuel rapide avec palette PUSH verte contrastée et diffuseurs d'eau aérée anti-traumatique.",
+    "badge": "Palette PUSH Haute Visibilité",
+    "image": "/assets/products_transparent/station_rincage_oculaire_push_verte.png",
+    "orig_image": "/assets/products/station_rincage_oculaire_push_verte_orig.png",
+    "specs": {
+      "Norme": "NF EN 15154-2 / ISO 3864",
+      "Signalétique": "Couleur de sécurité normalisée verte (signalisation de secours)",
+      "Actionneur": "Palette ergonomique surdimensionnée PUSH avec verrouillage mécanique à l'ouverture",
+      "Protection diffuseurs": "Capuchons protecteurs automatiques chassés par la pression d'eau",
+      "Matériaux": "Vasque inox et mécanismes laiton rilsanisé anti-calcaire",
+      "Débit": "Régulation dynamique assurant 15 minutes d'arrosage continu normalisé"
+    },
+    "applications": [
+      "Laboratoires d'enseignement secondaire et supérieur",
+      "Unités de production cosmétique et détergents",
+      "Pharmacies hospitalières et stérilisation",
+      "Laboratoires de recherche appliquée"
+    ],
+    "tags": [
+      "Palette PUSH Verte",
+      "Signalétique Secours",
+      "Jets Doux Aérés",
+      "Buses Antipoussière"
+    ],
+    "gallery": [
+      "/assets/products_transparent/station_rincage_oculaire_push_verte.png",
+      "/assets/products/station_rincage_oculaire_push_verte_orig.png"
+    ]
+  },
+  {
+    "id": "siege-laboratoire-ergonomique-dossier",
+    "slug": "siege-laboratoire-ergonomique-dossier",
+    "category": "mobilier",
+    "category_label": "Mobilier & Sièges Techniques",
+    "name": "Siège Ergonomique de Laboratoire avec Dossier Haute Résistance HBIG",
+    "short_desc": "Siège technique haut de gamme en polyuréthane moulé anti-acide avec repose-pieds circulaire chromé ajustable et assise grand confort.",
+    "badge": "Ergonomie & Polyuréthane Pur",
+    "image": "/assets/products_transparent/siege_laboratoire_ergonomique_dossier.png",
+    "orig_image": "/assets/products/siege_laboratoire_ergonomique_dossier_orig.png",
+    "specs": {
+      "Norme": "NF EN 1335 (Ergonomie au travail) & DIN 68877",
+      "Matière assise/dossier": "Mousse polyuréthane souple intégrale haute densité résistante aux désinfectants, acides et solvants",
+      "Réglages": "Hauteur d'assise par vérin pneumatique à gaz (course 550 à 800 mm) + inclinaison du dossier",
+      "Repose-pieds": "Anneau repose-pieds circulaire en acier chromé réglable en hauteur",
+      "Piétement": "Base 5 branches aluminium poli ou acier avec patins stabilisateurs ou roulettes sol dur",
+      "Nettoyage": "Désinfection facile à l'alcool 70%, javel diluée ou détergents hospitaliers"
+    },
+    "applications": [
+      "Postes de microscopie et travail prolongé sur paillasse",
+      "Laboratoires de microbiologie et d'analyses de sang",
+      "Salles d'essais métrologiques et instrumentation fine",
+      "Lignes de conditionnement pharmaceutique"
+    ],
+    "tags": [
+      "Polyuréthane Anti-Acide",
+      "Dossier Réglable",
+      "Repose-Pieds Chromé",
+      "NF EN 1335"
+    ],
+    "gallery": [
+      "/assets/products_transparent/siege_laboratoire_ergonomique_dossier.png",
+      "/assets/products/siege_laboratoire_ergonomique_dossier_orig.png"
+    ]
+  },
+  {
+    "id": "tabouret-salle-blanche-roulettes",
+    "slug": "tabouret-salle-blanche-roulettes",
+    "category": "mobilier",
+    "category_label": "Mobilier & Sièges Techniques",
+    "name": "Tabouret de Salle Blanche & Clinique Réglable à Roulettes HBIG",
+    "short_desc": "Tabouret sanitaire antibactérien blanc avec assise étanche sans couture et base 5 branches stable sur roulettes anti-traces.",
+    "badge": "Spécial Salle Blanche & Clinique",
+    "image": "/assets/products_transparent/tabouret_salle_blanche_roulettes.png",
+    "orig_image": "/assets/products/tabouret_salle_blanche_roulettes_orig.png",
+    "specs": {
+      "Revêtement": "Vinyle expansé de qualité médicale blanc, traitement antibactérien et antifongique",
+      "Étanchéité": "Assise thermo-soudée sans coutures pour éliminer les nids à bactéries",
+      "Mécanisme": "Vérin pneumatique à cartouche étanche et commande sous assise à 360°",
+      "Course réglable": "Hauteur 480 mm à 680 mm",
+      "Roulettes": "Roulettes doubles galets polyuréthane non marquantes pour sols lisses",
+      "Classification": "Compatible zones ISO 7 et ISO 8 (Salles propres)"
+    },
+    "applications": [
+      "Blocs opératoires, cliniques et centres dentaires",
+      "Salles blanches pharmaceutiques et semi-conducteurs",
+      "Laboratoires de culture cellulaire et génétique",
+      "Salles de pesée stérile"
+    ],
+    "tags": [
+      "Vinyle Médical Blanc",
+      "Sans Couture",
+      "Roulettes Doubles",
+      "Zone Propre ISO"
+    ],
+    "gallery": [
+      "/assets/products_transparent/tabouret_salle_blanche_roulettes.png",
+      "/assets/products/tabouret_salle_blanche_roulettes_orig.png"
+    ]
+  },
+  {
+    "id": "tabouret-ergonomique-reglable-hbig",
+    "slug": "tabouret-ergonomique-reglable-hbig",
+    "category": "mobilier",
+    "category_label": "Mobilier & Sièges Techniques",
+    "name": "Tabouret Ergonomique Réglable HBIG Spécial Chimie",
+    "short_desc": "Tabouret rond monobloc polyuréthane strié antidérapant insensible aux coupures, brûlures chimiques et étincelles.",
+    "badge": "Inusable & Anti-Chimique",
+    "image": "/assets/products_transparent/tabouret_ergonomique_reglable_hbig.png",
+    "orig_image": "/assets/products/tabouret_ergonomique_reglable_hbig_orig.png",
+    "specs": {
+      "Assise": "Polyuréthane injecté haute densité avec relief de ventilation et bord arrondi",
+      "Résistance": "Imperméable aux huiles, graisses, solvants usuels et acides modérés",
+      "Réglage hauteur": "Vérin oléopneumatique à gaz sous cache télescopique anti-poussière (500 - 720 mm)",
+      "Embase": "Piétement 5 branches en polyamide renforcé fibre de verre Ø600 mm",
+      "Charge maximale": "130 kg en usage continu 24/7"
+    },
+    "applications": [
+      "Paillasses d'enseignement et travaux pratiques",
+      "Laboratoires d'essais mécaniques et physiques",
+      "Ateliers de fabrication et d'usinage mécanique",
+      "Postes d'emballage et d'expédition"
+    ],
+    "tags": [
+      "Polyuréthane Haute Densité",
+      "Vérin Protégé Gaz",
+      "Anti-Glisse",
+      "Atelier & Labo"
+    ],
+    "gallery": [
+      "/assets/products_transparent/tabouret_ergonomique_reglable_hbig.png",
+      "/assets/products/tabouret_ergonomique_reglable_hbig_orig.png"
+    ]
+  },
+  {
+    "id": "tabouret-industriel-cuir-chrome",
+    "slug": "tabouret-industriel-cuir-chrome",
+    "category": "mobilier",
+    "category_label": "Mobilier & Sièges Techniques",
+    "name": "Tabouret Industriel Cuir Synthétique & Acier Chromé HBIG",
+    "short_desc": "Assise rembourrée en cuir de synthèse haute durabilité avec structure renforcée en acier chromé pour postes de commande et contrôle.",
+    "badge": "Design Industriel & Confort",
+    "image": "/assets/products_transparent/tabouret_industriel_cuir_chrome.png",
+    "orig_image": "/assets/products/tabouret_industriel_cuir_chrome_orig.png",
+    "specs": {
+      "Garnissage": "Mousse haute résilience 40 kg/m³ recouverte de cuir synthétique renforcé",
+      "Structure": "Tubes et base acier finition chrome miroir haute brillance",
+      "Repose-pieds": "Cercle repose-pieds solidaire de l'assise pour un confort ergonomique quelle que soit la hauteur",
+      "Pivotement": "Rotation fluide à 360° sur roulement à billes encapsulé",
+      "Réglage": "Vérin hydraulique/gaz classe 4"
+    },
+    "applications": [
+      "Salles de contrôle de process industriel",
+      "Postes de supervision en cabine de laboratoire",
+      "Comptoirs d'accueil technique et réception d'échantillons",
+      "Bureaux d'études et dessin technique"
+    ],
+    "tags": [
+      "Cuir Synthétique Résistant",
+      "Structure Chromée",
+      "Pivotant 360°",
+      "Poste de Contrôle"
+    ],
+    "gallery": [
+      "/assets/products_transparent/tabouret_industriel_cuir_chrome.png",
+      "/assets/products/tabouret_industriel_cuir_chrome_orig.png"
+    ]
+  },
+  {
+    "id": "tabouret-polyurethane-noir-chrome",
+    "slug": "tabouret-polyurethane-noir-chrome",
+    "category": "mobilier",
+    "category_label": "Mobilier & Sièges Techniques",
+    "name": "Tabouret Haut d'Atelier Polyuréthane Noir & Base Chromée HBIG",
+    "short_desc": "Tabouret haut pour paillasses 900mm et plans de travail surélevés avec repose-pieds tubulaire soudé et vérin grand débattement.",
+    "badge": "Haute Posture (Paillasse 900mm)",
+    "image": "/assets/products_transparent/tabouret_polyurethane_noir_chrome.png",
+    "orig_image": "/assets/products/tabouret_polyurethane_noir_chrome_orig.png",
+    "specs": {
+      "Matière": "Polyuréthane monobloc indéformable et lavable à grande eau",
+      "Hauteur d'assise": "Course haute spécialement étudiée pour paillasse hauteur 900 mm (600 à 850 mm)",
+      "Châssis": "Colonne chromée avec repose-pieds circulaire fixe en acier soudé",
+      "Base": "Base circulaire lestée avec joint périphérique protecteur de sol",
+      "Stabilité": "Anti-basculement certifié selon directives sécurité au travail"
+    },
+    "applications": [
+      "Paillasses hautes de chimie et biochimie",
+      "Postes de travail debout-assis en laboratoire",
+      "Salles de pesée et de manipulation sous sorbonne",
+      "Postes de microscopie surélevés"
+    ],
+    "tags": [
+      "Haute Posture (900mm)",
+      "Base Lestée Stable",
+      "Repose-Pieds Inclus",
+      "Inusable"
+    ],
+    "gallery": [
+      "/assets/products_transparent/tabouret_polyurethane_noir_chrome.png",
+      "/assets/products/tabouret_polyurethane_noir_chrome_orig.png"
+    ]
+  }
+]

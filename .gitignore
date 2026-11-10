@@ -23,3 +23,7 @@ $RECYCLE.BIN/
 .idea/
 .vscode/
 *.swp
+
+# Screenshots & Backups
+screenshots/
+*_bak/
