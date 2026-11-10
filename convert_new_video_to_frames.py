@@ -6,9 +6,10 @@ from PIL import Image
 
 def main():
     start_time = time.time()
-    video_path = r'D:\Hb industry\user_new_video.mp4'
-    desktop_dir = r'D:\Hb industry\static\frames\home\desktop\webp'
-    mobile_dir = r'D:\Hb industry\static\frames\home\mobile\webp'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    video_path = os.path.join(base_dir, 'user_new_video.mp4')
+    desktop_dir = os.path.join(base_dir, 'static', 'frames', 'home', 'desktop', 'webp')
+    mobile_dir = os.path.join(base_dir, 'static', 'frames', 'home', 'mobile', 'webp')
     
     os.makedirs(desktop_dir, exist_ok=True)
     os.makedirs(mobile_dir, exist_ok=True)
