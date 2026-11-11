@@ -1204,6 +1204,10 @@
 
     // Load full dashboard data
     async function loadDashboard() {
+      const expBtn = document.getElementById('btn-export-csv');
+      if (expBtn && authToken) {
+        expBtn.href = '/api/admin/export?token=' + encodeURIComponent(authToken);
+      }
       await Promise.all([loadStats(), loadLeads()]);
     }
 
